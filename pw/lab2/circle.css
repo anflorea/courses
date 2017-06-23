@@ -1,0 +1,49 @@
+@keyframes rot {
+	from {
+		transform:  rotate(0deg)
+					translate(200px)
+					rotate(0deg);
+	}
+	to {
+		transform:  rotate(360deg)
+					translate(200px)
+					rotate(-360deg);
+	}
+}
+
+@keyframes rot2 {
+	from {
+		transform:  rotate(0deg)
+					translate(0px)
+					rotate(0deg);
+	}
+	to {
+		transform:  rotate(0deg)
+					translate(0px)
+					rotate(-360deg);
+	}
+}
+
+.circle {
+	background-color: pink;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 200px;
+	border: 2px solid black;
+	border-radius: 50px;
+	animation: rot 2s infinite linear;
+}
+
+.circle2 {
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 200px;
+	border: 2px solid black;
+	border-radius: 50px;
+	animation: rot2 2s infinite linear;
+}

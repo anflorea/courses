@@ -1,0 +1,22 @@
+<h2>Rentals</h2>
+<div>
+  <label>First Name:</label>
+  <input #firstName>
+  <label>Last Name:</label>
+  <input #lastName>
+</div>
+<div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="loadRentals(firstName.value, lastName.value)">Next</button>
+</div>
+
+<form *ngIf="showRentals" #rentalsForm="ngForm">
+  <h3>Rentals:</h3>
+  <div *ngFor="let rental of rentals ">
+    <label>{{rental.movieName}}</label>
+    <input
+            [name]="rental.movieId">
+
+  </div>
+  <button (click)="save(rentalForm)">Save</button>
+</form>

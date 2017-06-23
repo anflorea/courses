@@ -1,0 +1,13 @@
+require 'socket'
+
+hostname = '172.30.116.170'
+localhost = '127.0.0.1'
+port = 7777
+
+puts "Please enter the message you want to send to the server: "
+message = gets
+
+s = UDPSocket.new
+s.send(message, 0, hostname, port)
+print "The response from the server is: "
+p s.recvfrom(1000)

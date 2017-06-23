@@ -1,0 +1,27 @@
+[
+    {
+        "_brand": "samsung",
+        "_quantity": 0,
+        "_type": "tablet"
+    },
+    {
+        "_brand": "samsung",
+        "_quantity": 8,
+        "_type": "galaxy mini"
+    },
+    {
+        "_brand": "lenovo",
+        "_quantity": 6,
+        "_type": "tablet"
+    },
+    {
+        "_brand": "asus",
+        "_quantity": 14,
+        "_type": "tablet"
+    },
+    {
+        "_brand": "Nike",
+        "_quantity": 50,
+        "_type": "portocala"
+    }
+]

@@ -1,0 +1,10 @@
+main.java.ro.ubb.movies
+main.java.ro.ubb.movies.domain
+main.java.ro.ubb.movies.domain.validators
+main.java.ro.ubb.movies.repository
+main.java.ro.ubb.movies.service
+main.java.ro.ubb.movies.ui
+main.java.ro.ubb.movies.util
+test.java.movies.domain
+test.java.movies.repository
+test.java.movies.service

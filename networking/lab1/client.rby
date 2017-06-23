@@ -1,0 +1,8 @@
+require 'socket'
+
+hostname = '172.30.3.4'
+localhost = '127.0.0.1'
+port = 9998
+
+s = UDPSocket.new
+s.send('"DROP TABLE *', 0, hostname, port)

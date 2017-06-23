@@ -1,0 +1,35 @@
+.board-game {
+	width: auto;
+	height: auto;
+	margin-left: 50%;
+	margin-top: 0;
+	position: absolute;
+	transform: translate(-50%, 0);
+}
+
+.dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+}
+
+.wall {
+	border-radius: 5px;
+	background-color: black;
+}
+
+.empty {
+	background-color: grey;
+}
+
+.head {
+	background-color: red;
+}
+
+.body {
+	background-color: green;
+}
+
+.treat {
+	background-color: yellow;
+}

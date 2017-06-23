@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> jQuery </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<table>
+			<tr class="row">
+            <td class="special"><button type="button" class="delete">Delete</button></td>
+            <div class="cell">
+                <td><input type="text" value="qqq" readonly></td>
+                <td><input type="text" value="qqq" readonly></td>
+                <td><input type="text" value="qqq" readonly></td>
+                <td><input type="text" value="qqq" readonly></td>
+                <td><input type="text" value="qqq" readonly></td>
+            </div>
+            <td class="special"><button type="button" class="add">Add</button></td>
+        </tr>
+        <tr class="row">
+            <td class="special"><button type="button" class="delete">Delete</button></td>
+            <div class="cell">
+                <td><input class="theInput" type="text" value="aaa" readonly></td>
+                <td><input class="theInput" type="text" value="aaa" readonly></td>
+                <td><input class="theInput" type="text" value="aaa" readonly></td>
+                <td><input class="theInput" type="text" value="aaa" readonly></td>
+                <td><input class="theInput" type="text" value="aaa" readonly></td>
+            </div>
+            <td class="special"><button type="button" class="add">Add</button></td>
+        </tr>
+        <tr class="row">
+            <td class="special"><button type="button" class="delete">Delete</button></td>
+            <div class="cell">
+                <td><input class="theInput" type="text" value="bbb" readonly></td>
+                <td><input class="theInput" type="text" value="bbb" readonly></td>
+                <td><input class="theInput" type="text" value="bbb" readonly></td>
+                <td><input class="theInput" type="text" value="bbb" readonly></td>
+                <td><input class="theInput" type="text" value="bbb" readonly></td>
+            </div>
+            <td class="special"><button type="button" class="add">Add</button></td>
+        </tr>
+        <tr class="row">
+            <td class="special"><button type="button" class="delete">Delete</button></td>
+            <div class="cell">
+                <td><input class="theInput" type="text" value="ccc" readonly></td>
+                <td><input class="theInput" type="text" value="ccc" readonly></td>
+                <td><input class="theInput" type="text" value="ccc" readonly></td>
+                <td><input class="theInput" type="text" value="ccc" readonly></td>
+                <td><input class="theInput" type="text" value="ccc" readonly></td>
+            </div>
+            <td class="special"><button type="button" class="add">Add</button></td>
+        </tr>
+        <tr class="row">
+            <td class="special"><button type="button" class="delete">Delete</button></td>
+            <div class="cell">
+                <td><input class="theInput" type="text" value="ddd" readonly></td>
+                <td><input class="theInput" type="text" value="ddd" readonly></td>
+                <td><input class="theInput" type="text" value="ddd" readonly></td>
+                <td><input class="theInput" type="text" value="ddd" readonly></td>
+                <td><input class="theInput" type="text" value="ddd" readonly></td>
+            </div>
+            <td class="special"><button type="button" class="add">Add</button></td>
+        </tr>
+		</table>
+
+		<script>
+			$(document).on('click', '.delete', function () {
+				$(this).parent().parent().remove();
+			});
+
+			$(document).on('click', '.add', function() {
+				var parent = $(this).parent().parent();
+				parent.after('<tr class="row"> <td class="special"><button type="button" class="delete">Delete</button></td> <div class="cell"> <td><input class="theInput" type="text" value=""></td><td><input class="theInput" type="text" value=""></td><td><input class="theInput" type="text" value=""></td><td><input class="theInput" type="text" value=""></td><td><input class="theInput" type="text" value=""></td></div><td class="special"><button type="button" class="add">Add</button></td></tr>');
+			});
+
+			$(document).on('focusout', '.theInput', function() {
+				$(this).attr('readonly', true);
+			});
+		</script>
+	</body>
+</html>

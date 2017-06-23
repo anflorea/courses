@@ -1,0 +1,5 @@
+rootProject.name = 'Lab6-RMI'
+include 'client'
+include 'server'
+include 'common'
+

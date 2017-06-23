@@ -1,0 +1,3138 @@
+ExeStack: 
+	v = 10
+	(NewStmt (v, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (v, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (v, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); print(ReadHeapExp (a)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 22
+
+
+ExeStack: 
+	(print(a); print(ReadHeapExp (a)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	print(ReadHeapExp (a))
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); print(ReadHeapExp (a)))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); print(ReadHeapExp (a))))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); print(ReadHeapExp (a)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); print(ReadHeapExp (a)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	print(ReadHeapExp (a))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+2 -> 30
+
+
+ExeStack: 
+	(v = 10; (NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(v = 10; (NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(v = 10; (NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(v = 10; (NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 10
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (x, 20); (NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	NewStmt (x, 20)
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(NewStmt (a, 22); (WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50))))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	NewStmt (a, 22)
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(WriteHeap (a, 30); (print(a); (print(ReadHeapExp (a)); x = 50)))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	WriteHeap (a, 30)
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 22
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(a); (print(ReadHeapExp (a)); x = 50))
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(a)
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	(print(ReadHeapExp (a)); x = 50)
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	print(ReadHeapExp (a))
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+	x = 50
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->1
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+
+ExeStack: 
+
+
+SymbolTable: 
+a-->2
+v-->10
+x-->50
+
+
+Output: 
+2
+30
+
+
+FileTable: 
+
+
+Heap: 
+1 -> 20
+2 -> 30
+
+

@@ -1,0 +1,24 @@
+#Description
+
+2. The Furnace Design and implement a control module to control power of a furnace in order to increase the production’s efficiency. The power (small, medium, high) will depend on the temperature inside the furnace (cold, cool, moderate, hot, very hot) and of the capacity of the furnace (small, medium, high)
+
+##Description of the solution: ###Input Variables
+
+X = Temperature
+	L = {cold, cool, moderate, hot, very hot}
+	U = {x | 0 <= x <= 1}
+Y = Capacity
+	L = {small, mediu, high}
+	U = {y | 0 <= y <= 1}
+
+
+###Output
+
+Z = (the power)
+L = {small, medium, high}
+
+###Algorithm
+
+Mamdami model
+Defuzzification: LOM - Largest of maximum
+

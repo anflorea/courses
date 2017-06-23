@@ -1,0 +1,7 @@
+1,Ana,Cirjan,07544321255,Hasdeu
+2,Andrei,Florea,0754478890,Kuende
+3,Andra,Pop,0754466890,Hasdeu
+4,Dana,Marchis,0754466290,Steampului
+5,Diana,Truta,0754466290,Zalau
+6,Radu,Pop,0754466290,Baia Mare
+7,Angelo,Dragomir,0754666290,Observator

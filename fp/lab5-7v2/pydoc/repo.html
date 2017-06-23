@@ -1,0 +1,333 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module repo</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>repo</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/andrei/fundamentals/lab5-7v2/pydoc-stuff/repo.py">/home/andrei/fundamentals/lab5-7v2/pydoc-stuff/repo.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Oct&nbsp;31,&nbsp;2015<br>
+&nbsp;<br>
+@author:&nbsp;aflorea</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="repo.html#GeneralRepository">GeneralRepository</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="repo.html#ActivityRepository">ActivityRepository</a>
+</font></dt><dt><font face="helvetica, arial"><a href="repo.html#PersonsRepository">PersonsRepository</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="repo.html#mapRepository">mapRepository</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ActivityRepository">class <strong>ActivityRepository</strong></a>(<a href="repo.html#GeneralRepository">GeneralRepository</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="repo.html#ActivityRepository">ActivityRepository</a></dd>
+<dd><a href="repo.html#GeneralRepository">GeneralRepository</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ActivityRepository-addActivity"><strong>addActivity</strong></a>(self, my_activity)</dt><dd><tt>Description:&nbsp;Adds&nbsp;an&nbsp;activity&nbsp;to&nbsp;_list&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;already&nbsp;exist<br>
+Input:&nbsp;self,&nbsp;my_activity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;my_activity&nbsp;is&nbsp;an&nbsp;Activities&nbsp;type&nbsp;<a href="__builtin__.html#object">object</a><br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;the&nbsp;activity&nbsp;was&nbsp;added&nbsp;with&nbsp;success,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-findActivityById"><strong>findActivityById</strong></a>(self, activityID)</dt><dd><tt>Description:&nbsp;Finds&nbsp;an&nbsp;activity&nbsp;by&nbsp;the&nbsp;ID</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-getActivityDate"><strong>getActivityDate</strong></a>(self, anActivity)</dt><dd><tt>Description:&nbsp;Returns&nbsp;the&nbsp;date&nbsp;of&nbsp;an&nbsp;activity</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-removeActivities"><strong>removeActivities</strong></a>(self, activityID)</dt><dd><tt>Description:&nbsp;Removes&nbsp;an&nbsp;activity&nbsp;from&nbsp;_list&nbsp;if&nbsp;it&nbsp;exists<br>
+Input:&nbsp;self,&nbsp;activityID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;activityID&nbsp;is&nbsp;an&nbsp;integer&nbsp;&gt;&nbsp;0<br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;the&nbsp;activity&nbsp;was&nbsp;removed&nbsp;with&nbsp;success,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-updateActivity"><strong>updateActivity</strong></a>(self, my_activity)</dt><dd><tt>Description:&nbsp;Updates&nbsp;an&nbsp;activity&nbsp;from&nbsp;_list&nbsp;if&nbsp;it&nbsp;already&nbsp;exists<br>
+Input:&nbsp;self,&nbsp;my_activiy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;my_activity&nbsp;is&nbsp;an&nbsp;Activities&nbsp;type&nbsp;<a href="__builtin__.html#object">object</a><br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;the&nbsp;activity&nbsp;was&nbsp;updated&nbsp;with&nbsp;success,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="repo.html#GeneralRepository">GeneralRepository</a>:<br>
+<dl><dt><a name="ActivityRepository-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Constructor&nbsp;for&nbsp;the&nbsp;general&nbsp;reopsitory</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;_list</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-appendUndo"><strong>appendUndo</strong></a>(self, alist)</dt><dd><tt>Description:&nbsp;Adds&nbsp;a&nbsp;new&nbsp;undo&nbsp;backup<br>
+Input:&nbsp;self,&nbsp;alist<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;alist&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-computeRedo"><strong>computeRedo</strong></a>(self, list_copy)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;Redo&nbsp;functionality<br>
+Input:&nbsp;self,&nbsp;list_copy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;list_copy&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-computeUndo"><strong>computeUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;undo&nbsp;functionality<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-delUndo"><strong>delUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Removes&nbsp;the&nbsp;last&nbsp;undo&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;error&nbsp;in&nbsp;the&nbsp;system<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-get_all"><strong>get_all</strong></a>(self)</dt><dd><tt>Description:&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;objects&nbsp;in&nbsp;the&nbsp;repository<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;a&nbsp;list&nbsp;of&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="ActivityRepository-removeAll"><strong>removeAll</strong></a>(self)</dt><dd><tt>Description:&nbsp;removes&nbsp;all&nbsp;the&nbsp;objects&nbsp;from&nbsp;_list<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;-</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="repo.html#GeneralRepository">GeneralRepository</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GeneralRepository">class <strong>GeneralRepository</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GeneralRepository-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Constructor&nbsp;for&nbsp;the&nbsp;general&nbsp;reopsitory</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;_list</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-appendUndo"><strong>appendUndo</strong></a>(self, alist)</dt><dd><tt>Description:&nbsp;Adds&nbsp;a&nbsp;new&nbsp;undo&nbsp;backup<br>
+Input:&nbsp;self,&nbsp;alist<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;alist&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-computeRedo"><strong>computeRedo</strong></a>(self, list_copy)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;Redo&nbsp;functionality<br>
+Input:&nbsp;self,&nbsp;list_copy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;list_copy&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-computeUndo"><strong>computeUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;undo&nbsp;functionality<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-delUndo"><strong>delUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Removes&nbsp;the&nbsp;last&nbsp;undo&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;error&nbsp;in&nbsp;the&nbsp;system<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-get_all"><strong>get_all</strong></a>(self)</dt><dd><tt>Description:&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;objects&nbsp;in&nbsp;the&nbsp;repository<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;a&nbsp;list&nbsp;of&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="GeneralRepository-removeAll"><strong>removeAll</strong></a>(self)</dt><dd><tt>Description:&nbsp;removes&nbsp;all&nbsp;the&nbsp;objects&nbsp;from&nbsp;_list<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;-</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PersonsRepository">class <strong>PersonsRepository</strong></a>(<a href="repo.html#GeneralRepository">GeneralRepository</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="repo.html#PersonsRepository">PersonsRepository</a></dd>
+<dd><a href="repo.html#GeneralRepository">GeneralRepository</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PersonsRepository-addPerson"><strong>addPerson</strong></a>(self, aPerson)</dt><dd><tt>Description:&nbsp;Add's&nbsp;a&nbsp;new&nbsp;person&nbsp;to&nbsp;the&nbsp;_list&nbsp;if&nbsp;the&nbsp;person&nbsp;does&nbsp;not&nbsp;already&nbsp;exist<br>
+Input:&nbsp;self,&nbsp;aPerson<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;aPerson&nbsp;is&nbsp;a&nbsp;Persons&nbsp;type&nbsp;<a href="__builtin__.html#object">object</a><br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;aPerson&nbsp;was&nbsp;added,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-checkPersonById"><strong>checkPersonById</strong></a>(self, personID)</dt><dd><tt>Description:&nbsp;Check's&nbsp;if&nbsp;the&nbsp;person&nbsp;with&nbsp;the&nbsp;ID&nbsp;personID&nbsp;is&nbsp;in&nbsp;_list<br>
+Input:&nbsp;self,&nbsp;personID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;personID&nbsp;is&nbsp;an&nbsp;integer&nbsp;&gt;&nbsp;0<br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;personID&nbsp;is&nbsp;found&nbsp;in&nbsp;_list,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-findPersonById"><strong>findPersonById</strong></a>(self, personID)</dt><dd><tt>Description:&nbsp;Check's&nbsp;if&nbsp;the&nbsp;person&nbsp;with&nbsp;the&nbsp;ID&nbsp;personID&nbsp;is&nbsp;in&nbsp;_list<br>
+Input:&nbsp;self,&nbsp;personID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;personID&nbsp;is&nbsp;an&nbsp;integer&nbsp;&gt;&nbsp;0<br>
+Output:&nbsp;i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;if&nbsp;personID&nbsp;is&nbsp;found&nbsp;in&nbsp;_list,&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;that&nbsp;ID&nbsp;is&nbsp;returned,&nbsp;-1&nbsp;is&nbsp;returned&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-getPersonName"><strong>getPersonName</strong></a>(self, aPerson)</dt><dd><tt>Description:&nbsp;Returns&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;person<br>
+Input:&nbsp;self,&nbsp;aPerson<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;aPerson&nbsp;is&nbsp;a&nbsp;Persons&nbsp;type&nbsp;<a href="__builtin__.html#object">object</a><br>
+Output:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;persons&nbsp;(string)</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-removePerson"><strong>removePerson</strong></a>(self, personID)</dt><dd><tt>Description:&nbsp;Removes&nbsp;a&nbsp;certain&nbsp;person&nbsp;from&nbsp;the&nbsp;repository<br>
+Input:&nbsp;slef,&nbsp;personID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;personID&nbsp;is&nbsp;an&nbsp;integer&nbsp;&gt;&nbsp;0<br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;the&nbsp;person&nbsp;is&nbsp;removed,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-updatePerson"><strong>updatePerson</strong></a>(self, my_person)</dt><dd><tt>Description:&nbsp;Updates&nbsp;a&nbsp;person&nbsp;from&nbsp;the&nbsp;_list&nbsp;if&nbsp;it's&nbsp;ID&nbsp;already&nbsp;exists<br>
+Input:&nbsp;self,&nbsp;my_person<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;my_person&nbsp;is&nbsp;a&nbsp;Persons&nbsp;type&nbsp;<a href="__builtin__.html#object">object</a><br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;1&nbsp;if&nbsp;my_person&nbsp;was&nbsp;updated,&nbsp;0&nbsp;otherwise</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="repo.html#GeneralRepository">GeneralRepository</a>:<br>
+<dl><dt><a name="PersonsRepository-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Constructor&nbsp;for&nbsp;the&nbsp;general&nbsp;reopsitory</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;_list</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-appendUndo"><strong>appendUndo</strong></a>(self, alist)</dt><dd><tt>Description:&nbsp;Adds&nbsp;a&nbsp;new&nbsp;undo&nbsp;backup<br>
+Input:&nbsp;self,&nbsp;alist<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;alist&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-computeRedo"><strong>computeRedo</strong></a>(self, list_copy)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;Redo&nbsp;functionality<br>
+Input:&nbsp;self,&nbsp;list_copy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;list_copy&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-computeUndo"><strong>computeUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;undo&nbsp;functionality<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;succes&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-delUndo"><strong>delUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Removes&nbsp;the&nbsp;last&nbsp;undo&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;error&nbsp;in&nbsp;the&nbsp;system<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-get_all"><strong>get_all</strong></a>(self)</dt><dd><tt>Description:&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;objects&nbsp;in&nbsp;the&nbsp;repository<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;_list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;a&nbsp;list&nbsp;of&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="PersonsRepository-removeAll"><strong>removeAll</strong></a>(self)</dt><dd><tt>Description:&nbsp;removes&nbsp;all&nbsp;the&nbsp;objects&nbsp;from&nbsp;_list<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Preconditions:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postconditions:&nbsp;-</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="repo.html#GeneralRepository">GeneralRepository</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="mapRepository">class <strong>mapRepository</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="mapRepository-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Description:&nbsp;Constructor&nbsp;for&nbsp;the&nbsp;mapping&nbsp;repository.</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-addmap"><strong>addmap</strong></a>(self, aPerson, aActivity)</dt><dd><tt>Description:&nbsp;Creates&nbsp;a&nbsp;map&nbsp;between&nbsp;a&nbsp;person&nbsp;and&nbsp;an&nbsp;activity<br>
+Input:&nbsp;self,&nbsp;aPerson,&nbsp;aActivity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;aPerson&nbsp;and&nbsp;aActivity&nbsp;are&nbsp;Persons&nbsp;and&nbsp;Activities&nbsp;objects<br>
+Output:&nbsp;0/1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;if&nbsp;the&nbsp;map&nbsp;was&nbsp;created,&nbsp;0&nbsp;if&nbsp;it&nbsp;already&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-appendUndo"><strong>appendUndo</strong></a>(self, alist)</dt><dd><tt>Description:&nbsp;Adds&nbsp;a&nbsp;backup&nbsp;for&nbsp;the&nbsp;undo&nbsp;in&nbsp;the&nbsp;dictionary<br>
+Input:&nbsp;self,&nbsp;alist<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;alist&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-computeRedo"><strong>computeRedo</strong></a>(self, list_copy)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;redo&nbsp;functionality<br>
+Input:&nbsp;self,&nbsp;list_copy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;list_copy&nbsp;is&nbsp;a&nbsp;list<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;success&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-computeUndo"><strong>computeUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Computes&nbsp;the&nbsp;undo&nbsp;functionality&nbsp;for&nbsp;the&nbsp;map&nbsp;dictionary<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1/0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;1&nbsp;on&nbsp;success&nbsp;/&nbsp;0&nbsp;if&nbsp;failed</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-delUndo"><strong>delUndo</strong></a>(self)</dt><dd><tt>Description:&nbsp;Removes&nbsp;the&nbsp;last&nbsp;undo&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;error&nbsp;in&nbsp;the&nbsp;system<br>
+Input:&nbsp;self<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Precondition:&nbsp;-<br>
+Output:&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Postcondition:&nbsp;-</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-get_all"><strong>get_all</strong></a>(self)</dt><dd><tt>Description:&nbsp;Returns&nbsp;the&nbsp;mapping&nbsp;dictionary</tt></dd></dl>
+
+<dl><dt><a name="mapRepository-removeActivity"><strong>removeActivity</strong></a>(self, activityID)</dt><dd><tt>Description:&nbsp;Removes&nbsp;all&nbsp;the&nbsp;activityID&nbsp;activities&nbsp;from&nbsp;the&nbsp;mapping&nbsp;dictionary</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

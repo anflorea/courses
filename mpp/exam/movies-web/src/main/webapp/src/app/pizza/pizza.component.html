@@ -1,0 +1,18 @@
+
+<div>
+  <h2>Pizzas</h2>
+  <br>
+  <div *ngFor="let pizza of pizzas">
+    <h3><span (click)="gotoDetail(pizza)" class="label label-default flo-class">{{pizza.name}}</span></h3>
+    <input type="text" #textFieldPrice [(ngModel)]="pizza.price" class="form-control" />
+    <button (click)="updateOne(pizza)" class="btn btn-default" > Update </button>
+    <hr>
+  </div>
+
+  <br>
+
+  <h3><span class="label label-default">Price: </span></h3>
+  <input type="text" #textFieldPriceAll class="form-control" />
+  <button (click)="updateAll(textFieldPriceAll.value)" class="btn btn-default">Update All</button>
+</div>
+

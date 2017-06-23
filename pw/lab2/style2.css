@@ -1,0 +1,27 @@
+body {
+	background-color: lightgray;
+	font-family: 'Raleway', sans-serif;
+}
+
+.menu-btn {
+	background-color: #ED4357;
+	cursor: default;
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	color: transparent;
+	text-shadow: 0 0 3px white;
+	font-size: 18px;
+	display: block;
+	text-transform: capitalize;
+	transition: background-color 0.5s;
+	/*transition: text-shadow 0.5s;*/
+	transition: font-size 0.5s;
+}
+
+.menu-btn:hover {
+	font-size: 20px;
+	text-shadow: 0 0 0px white;
+}

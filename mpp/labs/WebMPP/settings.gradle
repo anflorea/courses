@@ -1,0 +1,5 @@
+rootProject.name = 'WebMPP'
+include 'movies-core'
+include 'movies-web'
+
+

@@ -1,0 +1,40 @@
+<h2>Rent a movie</h2>
+<div>
+  <label>First Name:</label>
+  <input #firstName>
+  <label>Last Name:</label>
+  <input #lastName>
+</div>
+<div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="loadMovies(firstName.value, lastName.value)">Next</button>
+</div>
+
+
+<div *ngIf="showMovies">
+  <div>
+    <h3>Selected movies (click to remove):</h3>
+    <ol>
+      <li *ngFor="let movie of selectedMovies"
+          (click)="removeSelectedMovie(movie)">
+        {{movie.name}}
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div *ngIf="showMovies">
+  <div>
+    <h3>Available movies (click to select):</h3>
+    <ol>
+      <li *ngFor="let movie of availableMovies"
+          (click)="selectMovie(movie)">
+        {{movie.name}}
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div *ngIf="showMovies">
+  <button (click)="save()">Save</button>
+</div>

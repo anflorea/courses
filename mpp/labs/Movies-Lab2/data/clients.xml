@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<clients>
+	<client id="1">
+		<firstName>Ana</firstName>
+		<lastName>Cirjan</lastName>
+		<phoneNr>0754478899</phoneNr>
+		<address>Hasdeu</address>
+	</client>
+	<client id="2">
+		<firstName>Andrei</firstName>
+		<lastName>Florea</lastName>
+		<phoneNr>0754478890</phoneNr>
+		<address>Kuende</address>
+	</client>
+	<client id="3">
+		<firstName>Andra</firstName>
+		<lastName>Pop</lastName>
+		<phoneNr>0754466890</phoneNr>
+		<address>Hasdeu</address>
+	</client>
+	<client id="4">
+		<firstName>Dana</firstName>
+		<lastName>Marchis</lastName>
+		<phoneNr>0754466290</phoneNr>
+		<address>Steampului</address>
+	</client>
+	<client id="5">
+		<firstName>Diana</firstName>
+		<lastName>Truta</lastName>
+		<phoneNr>0754466290</phoneNr>
+		<address>Zalau</address>
+	</client>
+	<client id="6">
+		<firstName>Radu</firstName>
+		<lastName>Pop</lastName>
+		<phoneNr>0754466290</phoneNr>
+		<address>Baia Mare</address>
+	</client>
+	<client id="7">
+		<firstName>Angelo</firstName>
+		<lastName>Dragomir</lastName>
+		<phoneNr>0754666290</phoneNr>
+		<address>Observator</address>
+	</client>
+</clients>

@@ -1,0 +1,7 @@
+require 'socket'
+s = UDPSocket.new
+s.bind(nil, 9999)
+5.times do
+	text, sender = s.recvfrom(1000)
+	puts "Received message: #{text} from: #{sender}"
+end

@@ -1,0 +1,23 @@
+<h3>Add Client</h3>
+<form *ngIf="active">
+<div>
+  <label>First Name: </label>
+  <input #firstName/>
+</div>
+<div>
+  <label>Last Name: </label>
+  <input class="form-control" #lastName type="text" name="lastName" required minlength="4" maxlength="20"/>
+</div>
+<div>
+  <label>Phone Number: </label>
+  <input #phoneNr>
+</div>
+<div>
+  <label>Address: </label>
+  <input #address >
+</div>
+<div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save(firstName.value, lastName.value, phoneNr.value, address.value)">Save</button>
+</div>
+  </form>

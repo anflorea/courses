@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rentals>
+	<rental id="1">
+		<clientId>1</clientId>
+		<movieId>1</movieId>
+	</rental>
+	<rental id="2">
+		<clientId>1</clientId>
+		<movieId>4</movieId>
+	</rental>
+	<rental id="3">
+		<clientId>2</clientId>
+		<movieId>4</movieId>
+	</rental>
+	<rental id="4">
+		<clientId>3</clientId>
+		<movieId>2</movieId>
+	</rental>
+	<rental id="5">
+		<clientId>3</clientId>
+		<movieId>10</movieId>
+	</rental>
+	<rental id="6">
+		<clientId>3</clientId>
+		<movieId>9</movieId>
+	</rental>
+	<rental id="7">
+		<clientId>4</clientId>
+		<movieId>5</movieId>
+	</rental>
+	<rental id="8">
+		<clientId>4</clientId>
+		<movieId>8</movieId>
+	</rental>
+	<rental id="9">
+		<clientId>4</clientId>
+		<movieId>10</movieId>
+	</rental>
+	<rental id="10">
+		<clientId>5</clientId>
+		<movieId>1</movieId>
+	</rental>
+	<rental id="11">
+		<clientId>5</clientId>
+		<movieId>3</movieId>
+	</rental>
+	<rental id="12">
+		<clientId>6</clientId>
+		<movieId>3</movieId>
+	</rental>
+	<rental id="13">
+		<clientId>6</clientId>
+		<movieId>7</movieId>
+	</rental>
+	<rental id="14">
+		<clientId>6</clientId>
+		<movieId>6</movieId>
+	</rental>
+</rentals>

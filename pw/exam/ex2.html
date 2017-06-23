@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Tab navigation </title>
+    <script>
+      function changeTab(number) {
+        console.log(number);
+        $('#container').empty();
+        var p = "";
+        var imgSrc = "";
+        switch (number) {
+          case 0:
+            p = "First thing";
+            imgSrc = "http://placekitten.com/302/301";
+            document.getElementById("container").style.backgroundColor = "green";
+            break;
+          case 1:
+            p = "thing 2";
+            imgSrc = "http://placekitten.com/302/304";
+            document.getElementById("container").style.backgroundColor = "yellow";
+            break;
+          case 2:
+            p = "thing 3";
+            imgSrc = "http://placekitten.com/302/305";
+            document.getElementById("container").style.backgroundColor = "red";
+            break;
+          case 3:
+            p = "thing 4";
+            imgSrc = "http://placekitten.com/302/306";
+            document.getElementById("container").style.backgroundColor = "orange";
+            break;
+          }
+
+        console.log(p);
+        $('#container').append("<p>" + p + "</p>");
+        $('#container').append("<img src=" + imgSrc + " />");
+        }
+      
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <style>
+      .tab {
+        margin: 10px;
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        background-color: blue;
+      }
+
+      #container {
+        width: 500px;
+        height: 600px;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='tab' onclick="changeTab(0);"> Tab1 </div>
+    <div class='tab' onclick="changeTab(1);"> Tab2 </div>
+    <div class='tab' onclick="changeTab(2);"> Tab3 </div>
+    <div class='tab' onclick="changeTab(3);"> Tab4 </div>
+
+    <div id='container'>
+    </div>
+  </body>
+</html>

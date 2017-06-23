@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"> </script>
+</head>
+
+<body>
+
+	<ul id="menu">
+		<li id="Item1">
+			<a href="#"
+			onmouseover="CloseMenu()">Home</a>
+		</li>
+		<li id="Item2">
+			<a href="#"
+			onmouseover="OpenMenu('Item2Submenu')">Events</a>
+			<ul id="Item2Submenu"
+				onmouseover="KeepSubmenu()"
+				onmouseout="CloseMenu()">
+				<a href="#">Event 1</a>
+				<a href="#">Event 2</a>
+				<a href="#">Event 3</a>
+			</ul>
+		</li>
+		<li id="Item3">
+			<a href="#"
+			onmouseover="OpenMenu('Item3Submenu')">
+			Shows
+			</a>
+			<ul id="Item3Submenu"
+				onmouseover="KeepSubmenu()"
+				onmouseout="CloseMenu()">
+				<a href="#">Theatre</a>
+				<a href="#">Movies</a>
+				<a href="#">Kabaret</a>
+				<a href="#">Most popular</a>
+				<a href="#">Top rated</a>
+			</ul>
+		</li>
+		<li id="Item4">
+			<a href="#"
+			onmouseover="OpenMenu('Item4Submenu')">Shop</a>
+			<ul id="Item4Submenu"
+				onmouseover="KeepSubmenu()"
+				onmouseout="CloseMenu()">
+				<a href="#">T-Shirts</a>
+				<a href="#">Armors</a>
+				<a href="#">Phones</a>
+				<a href="#">Swag Stuff</a>
+			</ul>
+		</li>
+		<li id="Item5">
+			<a href="#"
+			onmouseover="OpenMenu('Item5Submenu')">
+			Contact Us
+			</a>
+			<ul id="Item5Submenu"
+				onmouseover="KeepSubmenu()"
+				onmouseout="CloseMenu()">
+				<a href="#">Telephone</a>
+				<a href="#">Mail</a>
+				<a href="#">E-mail</a>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+</html>

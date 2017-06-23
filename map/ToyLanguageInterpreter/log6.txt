@@ -1,0 +1,5809 @@
+ExeStack: 
+	v = 6
+	(While (v - 4) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While (v - 4) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While (v - 4) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+4-->test.in
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(v = 6; (While ((v - 4 != 0)) (print(v); v = v - 1); print(v)))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = 6
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(While ((v - 4 != 0)) (print(v); v = v - 1); print(v))
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->6
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	(print(v); v = v - 1)
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	v = v - 1
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->5
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	While ((v - 4 != 0)) (print(v); v = v - 1)
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+	print(v)
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+
+
+FileTable: 
+
+
+Heap: 
+
+
+
+ExeStack: 
+
+
+SymbolTable: 
+v-->4
+
+
+Output: 
+6
+5
+4
+
+
+FileTable: 
+
+
+Heap: 
+
+
+

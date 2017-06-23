@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<movies>
+	<movie id="1">
+		<name>Hacksaw Ridge</name>
+		<genre>DRAMA</genre>
+		<year>2016</year>
+	</movie>
+	<movie id="2">
+		<name>American gangster</name>
+		<genre>ACTION</genre>
+		<year>2008</year>
+	</movie>
+	<movie id="3">
+		<name>Mamma mia</name>
+		<genre>COMEDY</genre>
+		<year>2005</year>
+	</movie>
+	<movie id="4">
+		<name>Saw</name>
+		<genre>HORROR</genre>
+		<year>2005</year>
+	</movie>
+	<movie id="5">
+		<name>Silent Hill</name>
+		<genre>HORROR</genre>
+		<year>2001</year>
+	</movie>
+		<movie id="6">
+		<name>The Conjuring</name>
+		<genre>HORROR</genre>
+		<year>2010</year>
+	</movie>
+	<movie id="7">
+		<name>Home Alone</name>
+		<genre>COMEDY</genre>
+		<year>2008</year>
+	</movie>
+	<movie id="8">
+		<name>Moonlight</name>
+		<genre>DRAMA</genre>
+		<year>2016</year>
+	</movie>
+	<movie id="9">
+		<name>Forrest Grump</name>
+		<genre>DRAMA</genre>
+		<year>1997</year>
+	</movie>
+	<movie id="10">
+		<name>Gone</name>
+		<genre>THRILLER</genre>
+		<year>2012</year>
+	</movie>
+</movies>

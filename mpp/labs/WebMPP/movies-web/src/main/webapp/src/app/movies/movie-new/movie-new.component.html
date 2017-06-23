@@ -1,0 +1,21 @@
+
+<h3>Add Movie</h3>
+
+<div>
+    <label>Name: </label>
+    <input #movieName/>
+</div>
+<div>
+    <label>Genre: </label>
+    <input #movieGenre>
+</div>
+<div>
+    <label>Year: </label>
+    <input #movieYear >
+</div>
+<div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="save(movieName.value, movieGenre.value, movieYear.value)">Save</button>
+</div>
+
+

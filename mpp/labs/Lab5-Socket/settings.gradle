@@ -1,0 +1,5 @@
+rootProject.name = 'Lab5-Socket'
+include 'client'
+include 'common'
+include 'server'
+

@@ -1,0 +1,12 @@
+<h3>
+  <span class="label label-default">
+    Ingredients:
+  </span>
+</h3>
+<ul class="list-group">
+  <li *ngFor="let i of ingredients" class="list-group-item">
+    {{i.name}}
+  </li>
+  </ul>
+<button (click) = "goBack()" class="btn btn-default"> Back
+  </button>
