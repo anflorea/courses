@@ -1,0 +1,24 @@
+Running the tests on a 2,2 GHz Intel Core i7 Mac with 4 cores
+
+- data set is 10000 x 10000 matrices
+
+Addition:
+
+Time for a matrix of 10000 X 10000 with 1 threads is: 404
+Time for a matrix of 10000 X 10000 with 2 threads is: 221
+Time for a matrix of 10000 X 10000 with 3 threads is: 261
+Time for a matrix of 10000 X 10000 with 20 threads is: 268
+Time for a matrix of 10000 X 10000 with 200 threads is: 185
+Time for a matrix of 10000 X 10000 with 5000 threads is: 449
+Time for a matrix of 10000 X 10000 with 10000 threads is: 2153	
+
+
+- data set is 2000 x 2000 matrices
+
+Multiplication:
+
+Time for a matrix of 2000/2000 X 2000/2000 with 1 threads is: 78057
+Time for a matrix of 2000/2000 X 2000/2000 with 2 threads is: 38415
+Time for a matrix of 2000/2000 X 2000/2000 with 20 threads is: 19583
+Time for a matrix of 2000/2000 X 2000/2000 with 500 threads is: 18802
+Time for a matrix of 2000/2000 X 2000/2000 with 2000 threads is: 18669
