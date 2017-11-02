@@ -51,12 +51,12 @@ class Tree:
             raise KeyError(val)
 
     def _find(self, val, node):
-        if(val == node.v):
+        if (val == node.v):
             return node.k
         elif (val < node.v and node.l != None):
-            self._find(val, node.l)
+            return self._find(val, node.l)
         elif (val > node.v and node.r != None):
-            self._find(val, node.r)
+            return self._find(val, node.r)
         else:
             raise KeyError(val)
 
