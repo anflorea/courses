@@ -10,5 +10,6 @@
 void errorExit(void);
 void printUsage(void);
 bool checkFile(char *fileName);
+int clamp(int value);
 
 #endif // PPM_ENCODER_H

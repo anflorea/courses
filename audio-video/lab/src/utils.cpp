@@ -1,5 +1,13 @@
 #include "ppmEncoder.h"
 
+int clamp(int value) {
+	if (value > 255)
+		return 255;
+	if (value < 0)
+		return 0;
+	return value;
+}
+
 void errorExit() {
 	exit(0);
 }

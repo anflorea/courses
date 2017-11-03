@@ -61,11 +61,14 @@ void decodeImage(char *fileName) {
 
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 8; j++) {
-				float Y = luma.at(t).m_values[i][j];
-				float U = chRed.at(t).m_values[i][j];
-				float V = chBlue.at(t).m_values[i][j];
+				int Y = luma.at(t).m_values[i][j];
+				int U = chRed.at(t).m_values[i][j];
+				int V = chBlue.at(t).m_values[i][j];
 
-				fw->putPixel(x + i, y + j, RgbPixel(Y, U, V));
+				RgbPixel pixel;
+				pixel.fromYUV(Y, U, V);
+
+				fw->putPixel(x + i, y + j, pixel);
 			}
 		}
 	}

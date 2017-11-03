@@ -52,12 +52,12 @@ void Block88::upSample() {
 void Block88::printBlock() {
 	for (int i = 0; i < 8; i++) {
 		for (int j = 0; j < 8; j++) {
-			printf("%7.3f ", m_values[i][j]);
+			printf("%3d ", m_values[i][j]);
 		}
 		if (i < 4) {
 			printf("    ");
 			for (int j = 0; j < 4; j++) {
-				printf("%7.3f ", m_subValues[i][j]);
+				printf("%3d ", m_subValues[i][j]);
 			}
 		}
 		printf("\n");

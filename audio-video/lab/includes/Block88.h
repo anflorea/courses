@@ -18,8 +18,8 @@ public:
 	void printBlock();
 
 //private:
-	float m_values[8][8];
-	float m_subValues[4][4];
+	int m_values[8][8];
+	int m_subValues[4][4];
 	int m_positionX;
 	int m_positionY;
 };

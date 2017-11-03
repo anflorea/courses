@@ -7,15 +7,17 @@ class RgbPixel
 {
 public:
 	RgbPixel(int r, int g, int b);
-	RgbPixel(float Y, float U, float V);
+	RgbPixel();
+
+	void fromYUV(int Y, int U, int V);
 
 	int getR();
 	int getG();
 	int getB();
 
-	float getY();
-	float getU();
-	float getV();
+	int getY();
+	int getU();
+	int getV();
 
 private:
 	int m_red;
