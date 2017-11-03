@@ -1,6 +1,16 @@
 # Vim swap files
 *.swp
 
+*.o
+*.ko
+*.obj
+*.elf
+
+*.lib
+*.a
+*.la
+*.lo
+
 target
 classes
 bin
