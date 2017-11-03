@@ -15,7 +15,7 @@ void FileWorker::readPpm() {
 	fgets(str1, 10, fp);
 	fgets(str2, 200, fp);
 
-	fscanf(fp, "%d%d%d", &n, &m, &maxi);
+	fscanf(fp, "%d%d%d", &m, &n, &maxi);
 
 	m_m = m;
 	m_n = n;
@@ -40,7 +40,7 @@ void FileWorker::writePpm() {
 	fp = fopen(m_destFile, "w");
 
 	fprintf(fp, "P3\n# CREATOR: Flo\n");
-	fprintf(fp, "%d %d\n255\n", m_n, m_m);
+	fprintf(fp, "%d %d\n255\n", m_m, m_n);
 
 	for (int i = 0; i < m_n; i++) {
 		for (int j = 0; j < m_m; j++) {

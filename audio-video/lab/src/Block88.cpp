@@ -29,16 +29,6 @@ void Block88::subSample() {
 	for (i = 0; i < 8; i += 2) {
 		y = 0;
 		for (j = 0; j < 8; j += 2) {
-			/*	
-			float asdf = (m_values[i][j] + m_values[i][j + 1] + m_values[i + 1][j] + m_values[i + 1][j + 1]) / 4;
-			if (asdf > 255)
-				printf("Fmmmmmmm\n");
-			m_values[i][j] = asdf;
-			m_values[i][j + 1] = asdf;
-			m_values[i + 1][j] = asdf;
-			m_values[i + 1][j + 1] = asdf;
-			*/
-			
 			m_subValues[x][y] =
 				(m_values[i][j] +
 				m_values[i + 1][j] +

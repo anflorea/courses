@@ -76,10 +76,11 @@ void decodeImage(char *fileName) {
 void testPrintYUV() {
 	printf("\n\nShould print the values in luma, chRed, chBlue\n\n");
 	
-	for (auto &block: chBlue) {
-		block.upSample();
+/*
+	for (auto &block: chRed) {
 		block.printBlock();
 	}
+*/
 }
 
 int main(int argc, char **argv) {
