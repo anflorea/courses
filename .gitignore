@@ -5,6 +5,8 @@
 *.ko
 *.obj
 *.elf
+*.in
+*.out
 
 *.lib
 *.a
