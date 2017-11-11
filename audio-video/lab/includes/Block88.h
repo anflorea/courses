@@ -17,6 +17,15 @@ public:
 
 	void printBlock();
 
+	void subtract128();
+	void add128();
+
+	void forwardDCT();
+	void inverseDCT();
+
+	void quantize();
+	void deQuantize();
+
 //private:
 	int m_values[8][8];
 	int m_subValues[4][4];

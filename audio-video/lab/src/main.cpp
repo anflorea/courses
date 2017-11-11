@@ -33,24 +33,42 @@ void encodeImage(char *fileName) {
 
 	for (auto &block: chRed) {
 		block.subSample();
+		block.upSample();
 	}
 
 	for (auto &block: chBlue) {
 		block.subSample();
+		block.upSample();
 	}
+
+	for (auto &block: luma) {
+		block.subtract128();
+	}
+	
+	for (auto &block: chRed) {
+		block.subtract128();
+	}
+
+	for (auto &block: chBlue) {
+		block.subtract128();
+	}
+
 }
 
 void decodeImage(char *fileName) {
 	printf("Should decode the image: %s\n", fileName);
 	
+	for (auto &block: luma) {
+		block.add128();
+	}
+	
 	for (auto &block: chRed) {
-		block.upSample();
+		block.add128();
 	}
 
 	for (auto &block: chBlue) {
-		block.upSample();
+		block.add128();
 	}
-
 
 	FileWorker *fw = new FileWorker(NULL, fileName);
 	fw->createPhoto(N, M);

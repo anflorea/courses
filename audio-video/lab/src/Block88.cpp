@@ -64,3 +64,19 @@ void Block88::printBlock() {
 	}
 	printf("\n");
 }
+
+void Block88::subtract128() {
+	for (int i = 0; i < 8; i++) { 
+		for (int j = 0; j < 8; j++) {
+			m_values[i][j] -= 128;
+		}
+	}
+}
+
+void Block88::add128() {
+	for (int i = 0; i < 8; i++) { 
+		for (int j = 0; j < 8; j++) {
+			m_values[i][j] += 128;
+		}
+	}
+}
