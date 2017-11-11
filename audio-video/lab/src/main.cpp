@@ -43,14 +43,17 @@ void encodeImage(char *fileName) {
 
 	for (auto &block: luma) {
 		block.subtract128();
+		block.quantize();
 	}
 	
 	for (auto &block: chRed) {
 		block.subtract128();
+		block.quantize();
 	}
 
 	for (auto &block: chBlue) {
 		block.subtract128();
+		block.quantize();
 	}
 
 }
@@ -59,14 +62,17 @@ void decodeImage(char *fileName) {
 	printf("Should decode the image: %s\n", fileName);
 	
 	for (auto &block: luma) {
+		block.deQuantize();
 		block.add128();
 	}
 	
 	for (auto &block: chRed) {
+		block.deQuantize();
 		block.add128();
 	}
 
 	for (auto &block: chBlue) {
+		block.deQuantize();
 		block.add128();
 	}
 

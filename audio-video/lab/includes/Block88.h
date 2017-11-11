@@ -5,9 +5,12 @@
 
 class RgbPixel;
 
+
 class Block88 {
 public:
 	Block88(RgbPixel **matrix, int x, int y, char component);
+
+	static int const Q[8][8];
 
 	void subSample();
 	void upSample();

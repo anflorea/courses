@@ -2,6 +2,16 @@
 
 #include "RgbPixel.h"
 
+int const Block88::Q[8][8] =
+	{{6, 4, 4, 6, 10, 16, 20, 24},
+	{5, 5, 6, 8, 10, 23, 24, 22},
+	{6, 5, 6, 10, 16, 23, 28, 22},
+	{6, 7, 9, 12, 20, 35, 32, 25},
+	{7, 9, 15, 22, 27, 44, 41, 31},
+	{10, 14, 22, 26, 32, 42, 45, 37},
+	{20, 26, 31, 35, 41, 48, 48, 40},
+	{29, 37, 38, 39, 45, 40, 41, 40}};
+
 Block88::Block88(RgbPixel **matrix, int x, int y, char component) {
 	m_positionX = x;
 	m_positionY = y;
@@ -77,6 +87,22 @@ void Block88::add128() {
 	for (int i = 0; i < 8; i++) { 
 		for (int j = 0; j < 8; j++) {
 			m_values[i][j] += 128;
+		}
+	}
+}
+
+void Block88::quantize() {
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++) {
+			m_values[i][j] /= Q[i][j];
+		}
+	}
+}
+
+void Block88::deQuantize() {
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++) {
+			m_values[i][j] *= Q[i][j];
 		}
 	}
 }
