@@ -43,16 +43,19 @@ void encodeImage(char *fileName) {
 
 	for (auto &block: luma) {
 		block.subtract128();
+		block.forwardDCT();
 		block.quantize();
 	}
 	
 	for (auto &block: chRed) {
 		block.subtract128();
+		block.forwardDCT();
 		block.quantize();
 	}
 
 	for (auto &block: chBlue) {
 		block.subtract128();
+		block.forwardDCT();
 		block.quantize();
 	}
 
@@ -63,16 +66,19 @@ void decodeImage(char *fileName) {
 	
 	for (auto &block: luma) {
 		block.deQuantize();
+		block.inverseDCT();
 		block.add128();
 	}
 	
 	for (auto &block: chRed) {
 		block.deQuantize();
+		block.inverseDCT();
 		block.add128();
 	}
 
 	for (auto &block: chBlue) {
 		block.deQuantize();
+		block.inverseDCT();
 		block.add128();
 	}
 
