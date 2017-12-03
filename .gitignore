@@ -1,6 +1,8 @@
 # Vim swap files
 *.swp
 
+*tests
+
 *.o
 *.ko
 *.obj
