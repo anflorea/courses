@@ -1,0 +1,79 @@
+{
+  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.+-<>(){}!%/*=;,%",
+  "states": [
+
+    {"label": "q0", "start": true, "end": false, "transitions":
+      [
+        {"elements": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q1"},
+        {"elements": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q1", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q2"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q2", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q3"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q3", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q4"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q4", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q5"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q5", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q6"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q6", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q7"},
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "q7", "start": false, "end": false, "transitions":
+      [
+        {"elements": "_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "s0", "start": true, "end": false, "transitions":
+      [
+        {"elements": "!<>", "new_state": "s1"},
+        {"elements": ";+-*/%<>=(){}", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "s1", "start": false, "end": false, "transitions":
+      [
+        {"elements": "=>", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "exit", "start": false, "end": true, "transitions":
+      [
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "alphabet": "0123456789ABCDEF.%$+-",
+  "states": [
+    {"label": "signum", "start": true, "end": false, "transitions":
+      [
+        {"elements": ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9",
+                    "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9"], "new_state": "deci0"},
+        {"elements": ["+0.", "-0."], "new_state": "frac0"},
+        {"elements": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], "new_state": "deci0"},
+        {"elements": ["0"], "new_state": "exit"},
+        {"elements": ["$"], "new_state": "hex0"},
+        {"elements": ["%"], "new_state": "bin0"}
+      ]
+    },
+    {"label": "deci0", "start": false, "end": true, "transitions":
+      [
+        {"elements": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "deci0"},
+        {"elements": ["."], "new_state": "frac0"}
+      ]
+    },
+
+    {"label": "hex0", "start": false, "end": true, "transitions":
+      [
+        {"elements": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"], "new_state": "hex0"}
+      ]
+    },
+
+    {"label": "bin0", "start": false, "end": true, "transitions":
+      [
+        {"elements": ["0", "1"], "new_state": "bin0"}
+      ]
+    },
+    {"label": "frac0", "start": false, "end": false, "transitions":
+      [
+        {"elements": ["1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "exit"},
+        {"elements": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "frac0"}
+      ]
+    }
+    ,
+    {"label": "exit", "start": false, "end": true, "transitions":
+      [
+
+      ]
+    }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.+-<>(){}%/*=:;,%$! \t\n",
+  "states": [
+
+    {"label": "q0", "start": true, "end": false, "transitions":
+      [
+        {"elements": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "q0"},
+        {"elements": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "delimiter", "start": true, "end": false, "transitions":
+      [
+        {"elements": " \n\t", "new_state": "exit"}
+      ]
+    },
+
+    {"label": "exit", "start": false, "end": true, "transitions":
+      [
+
+      ]
+    }
+  ]
+}
