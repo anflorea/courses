@@ -147,3 +147,110 @@ void Block88::deQuantize() {
 		}
 	}
 }
+
+void Block88::toCoefArray() {
+	int		t = 0;
+	int		n = 8;
+	int		m = 8;
+
+	for (int i = 0; i < n + m - 1; i++)
+	{
+		if (i % 2 == 1) {
+			// down left
+			int x = i < n ? 0 : i - n + 1;
+			int y = i < n ? i : n - 1;
+			while (x < m && y >= 0)
+				coefArray[t++] = m_values[x++][y--];
+		} else {
+			// up right
+			int x = i < m ? i : m - 1;
+			int y = i < m ? 0 : i - m + 1;
+			while (x >= 0 && y < n)
+				coefArray[t++] = m_values[x--][y++];
+		}
+	}
+}
+
+void Block88::fromCoefArray() {
+	int		t = 0;
+	int		n = 8;
+	int		m = 8;
+
+	for (int i = 0; i < n + m - 1; i++)
+	{
+		if (i % 2 == 1) {
+			// down left
+			int x = i < n ? 0 : i - n + 1;
+			int y = i < n ? i : n - 1;
+			while (x < m && y >= 0)
+				m_values[x++][y--] = coefArray[t++];
+		} else {
+			// up right
+			int x = i < m ? i : m - 1;
+			int y = i < m ? 0 : i - m + 1;
+			while (x >= 0 && y < n)
+				m_values[x--][y++] = coefArray[t++];
+		}
+	}
+}
+
+int getSize(int amp) {
+	if (amp >= -1 && amp <= 1)
+		return 1;
+	else if (amp >= -3 && amp <= 3)
+		return 2;
+	else if (amp >= -7 && amp <= 7)
+		return 3;
+	else if (amp >= -15 && amp <= 15)
+		return 4;
+	else if (amp >= -31 && amp <= 31)
+		return 5;
+	else if (amp >= -63 && amp <= 63)
+		return 6;
+	else if (amp >= -127 && amp <= 127)
+		return 7;
+	else if (amp >= -255 && amp <= 255)
+		return 8;
+	else if (amp >= -511 && amp <= 511)
+		return 9;
+	else if (amp >= -1023 && amp <= 1023)
+		return 10;
+	return 0;
+}
+
+void Block88::toDCCoefs() {
+	firstDC = std::make_tuple(getSize(coefArray[0]), coefArray[0]);
+	int	zeros = 0;
+
+	for (int i = 1; i < 64; i++) {
+		if (coefArray[i] == 0)
+			zeros++;
+		else {
+			dcCoef.push_back(std::make_tuple(zeros, getSize(coefArray[i]), coefArray[i]));
+			zeros = 0;
+		}
+	}
+	if (zeros > 0)
+		endsIn0 = true;
+}
+
+void Block88::fromDCCoefs() {
+	coefArray[0] = std::get<1>(firstDC);
+	int t = 1;
+
+	for (auto &el: dcCoef) {
+		int zeros = std::get<0>(el);
+		int size = std::get<1>(el);
+		int amp = std::get<2>(el);
+
+		for (int i = 0; i < zeros; i++)
+			coefArray[t++] = 0;
+
+		coefArray[t++] = amp;
+	}
+	if (endsIn0) {
+		for (int i = t; i < 64; i++)
+			coefArray[i++] = 0;
+	}
+
+}

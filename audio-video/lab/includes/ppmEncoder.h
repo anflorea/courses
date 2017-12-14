@@ -6,6 +6,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <vector>
+# include <tuple>
 
 void errorExit(void);
 void printUsage(void);

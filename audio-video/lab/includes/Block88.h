@@ -29,12 +29,23 @@ public:
 	void quantize();
 	void deQuantize();
 
+	void toCoefArray();
+	void fromCoefArray();
+
+	void toDCCoefs();
+	void fromDCCoefs();
+
 //private:
 	double m_dValues[8][8];
 	int m_values[8][8];
 	int m_subValues[4][4];
 	int m_positionX;
 	int m_positionY;
+
+	int	coefArray[64];
+	std::tuple<int, int> firstDC;
+	std::vector<std::tuple<int, int, int>>	dcCoef;
+	bool endsIn0 = false;
 };
 
 #endif // BLOCK_8_8_H

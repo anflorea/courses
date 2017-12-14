@@ -12,6 +12,8 @@ std::vector<Block88> chBlue;
 int N;
 int M;
 
+//#define DEBUG
+
 void encodeImage(char *fileName) {
 	printf("Should encode the image: %s\n", fileName);
 
@@ -45,38 +47,90 @@ void encodeImage(char *fileName) {
 		block.subtract128();
 		block.forwardDCT();
 		block.quantize();
+		block.toCoefArray();
 	}
 	
 	for (auto &block: chRed) {
 		block.subtract128();
 		block.forwardDCT();
 		block.quantize();
+		block.toCoefArray();
 	}
 
 	for (auto &block: chBlue) {
 		block.subtract128();
 		block.forwardDCT();
 		block.quantize();
+		block.toCoefArray();
 	}
 
+	for (int i = 0; i < luma.size(); i++) {
+		luma.at(i).toDCCoefs();
+		chRed.at(i).toDCCoefs();
+		chBlue.at(i).toDCCoefs();
+	}
+
+#ifdef DEBUG
+	luma.at(500).printBlock();
+	luma.at(500).toCoefArray();
+	for (int i = 0; i < 64; i++)
+		printf("%d ", luma.at(500).coefArray[i]);
+	printf("\n\n");
+
+	luma.at(500).dcCoef.clear();
+	luma.at(500).toDCCoefs();
+
+	printf("(%d)(%d),", std::get<0>(luma.at(500).firstDC), std::get<1>(luma.at(500).firstDC));
+	for (auto &el: luma.at(500).dcCoef) {
+		int zeros = std::get<0>(el);
+		int size = std::get<1>(el);
+		int amp = std::get<2>(el);
+		printf("(%d,%d)(%d),", zeros, size, amp);
+	}
+	if (luma.at(500).endsIn0)
+		printf("(0,0)");
+
+	printf("\n\n");
+
+	luma.at(500).fromDCCoefs();
+
+	luma.at(500).fromCoefArray();
+	luma.at(500).printBlock();
+#endif // DEBUG
 }
 
 void decodeImage(char *fileName) {
 	printf("Should decode the image: %s\n", fileName);
+
+	for (auto &block: luma) {
+		block.fromDCCoefs();
+	}
+
+	for (auto &block: chRed) {
+		block.fromDCCoefs();
+	}
+
+	for (auto &block: chBlue) {
+		block.fromDCCoefs();
+	}
+
 	
 	for (auto &block: luma) {
+		block.fromCoefArray();
 		block.deQuantize();
 		block.inverseDCT();
 		block.add128();
 	}
 	
 	for (auto &block: chRed) {
+		block.fromCoefArray();
 		block.deQuantize();
 		block.inverseDCT();
 		block.add128();
 	}
 
 	for (auto &block: chBlue) {
+		block.fromCoefArray();
 		block.deQuantize();
 		block.inverseDCT();
 		block.add128();
