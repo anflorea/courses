@@ -9,10 +9,12 @@ std::vector<Block88> luma;
 std::vector<Block88> chRed;
 std::vector<Block88> chBlue;
 
+std::vector<int> encoded;
+
 int N;
 int M;
 
-//#define DEBUG
+// #define DEBUG
 
 void encodeImage(char *fileName) {
 	printf("Should encode the image: %s\n", fileName);
@@ -48,6 +50,7 @@ void encodeImage(char *fileName) {
 		block.forwardDCT();
 		block.quantize();
 		block.toCoefArray();
+		block.toDCCoefs();
 	}
 	
 	for (auto &block: chRed) {
@@ -55,19 +58,31 @@ void encodeImage(char *fileName) {
 		block.forwardDCT();
 		block.quantize();
 		block.toCoefArray();
+		block.toDCCoefs();
 	}
+
 
 	for (auto &block: chBlue) {
 		block.subtract128();
 		block.forwardDCT();
 		block.quantize();
 		block.toCoefArray();
+		block.toDCCoefs();
 	}
 
 	for (int i = 0; i < luma.size(); i++) {
 		luma.at(i).toDCCoefs();
+		std::vector<int> theLumas = luma.at(i).toByteArray();
+		for (auto &e: theLumas)
+			encoded.push_back(e);
 		chRed.at(i).toDCCoefs();
+		std::vector<int> theChReds = chRed.at(i).toByteArray();
+		for (auto &e: theChReds)
+			encoded.push_back(e);
 		chBlue.at(i).toDCCoefs();
+		std::vector<int> theChBlues = chBlue.at(i).toByteArray();
+		for (auto &e: theChBlues)
+			encoded.push_back(e);
 	}
 
 #ifdef DEBUG
@@ -88,9 +103,33 @@ void encodeImage(char *fileName) {
 		printf("(%d,%d)(%d),", zeros, size, amp);
 	}
 	if (luma.at(500).endsIn0)
-		printf("(0,0)");
+		printf("(0,0)\n\n");
+
+	std::vector<int> bytes = luma.at(500).toByteArray();
+	for (auto &el: bytes) {
+		printf("%d ", el);
+	}
 
 	printf("\n\n");
+
+	Block88 testBlock = Block88(bytes, luma.at(500).getPositionX(), luma.at(500).getPositionY());
+
+	printf("(%d)(%d),", std::get<0>(testBlock.firstDC), std::get<1>(testBlock.firstDC));
+	for (auto &el: testBlock.dcCoef) {
+		int zeros = std::get<0>(el);
+		int size = std::get<1>(el);
+		int amp = std::get<2>(el);
+		printf("(%d,%d)(%d),", zeros, size, amp);
+	}
+	if (testBlock.endsIn0)
+		printf("(0,0)\n\n");
+
+	printf("\n\n");
+
+	testBlock.fromDCCoefs();
+	testBlock.fromCoefArray();
+
+	testBlock.printBlock();
 
 	luma.at(500).fromDCCoefs();
 
@@ -99,8 +138,68 @@ void encodeImage(char *fileName) {
 #endif // DEBUG
 }
 
+std::vector<int> getOneByteArray() {
+	std::vector<int> one;
+	int a;
+	int b;
+	int c;
+	int	t = 1;
+
+	// DC Coeficients
+	one.push_back(encoded.front());
+	encoded.erase(encoded.begin());
+	one.push_back(encoded.front());
+	encoded.erase(encoded.begin());
+
+	// Other values
+	while (t < 64) {
+		a = encoded.front();
+		encoded.erase(encoded.begin());
+		one.push_back(a);
+		t += a;
+		b = encoded.front();
+		encoded.erase(encoded.begin());
+		one.push_back(b);
+		if (a != 0 || b != 0) {
+			c = encoded.front();
+			encoded.erase(encoded.begin());
+			one.push_back(c);
+		}
+		else
+			return one;
+		t++;
+	}
+	return one;
+}
+
 void decodeImage(char *fileName) {
 	printf("Should decode the image: %s\n", fileName);
+
+	std::vector<Block88> newLuma = luma;
+	std::vector<Block88> newChRed = chRed;
+	std::vector<Block88> newChBlue = chBlue;
+
+	luma = std::vector<Block88>();
+	chRed = std::vector<Block88>();
+	chBlue = std::vector<Block88>();
+
+	int	i = 0;
+	int j = 0;
+
+	while (encoded.size() > 0) {
+		std::vector<int> theLumas = getOneByteArray();
+		luma.push_back(Block88(theLumas, i, j));
+		std::vector<int> theChReds = getOneByteArray();
+		chRed.push_back(Block88(theChReds, i, j));
+		std::vector<int> theChBlues = getOneByteArray();
+		chBlue.push_back(Block88(theChBlues, i, j));
+		j += 8;
+		if (j >= M) {
+			i += 8;
+			j = 0;
+		}
+	}
+
 
 	for (auto &block: luma) {
 		block.fromDCCoefs();
@@ -114,7 +213,6 @@ void decodeImage(char *fileName) {
 		block.fromDCCoefs();
 	}
 
-	
 	for (auto &block: luma) {
 		block.fromCoefArray();
 		block.deQuantize();

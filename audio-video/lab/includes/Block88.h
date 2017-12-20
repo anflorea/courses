@@ -9,6 +9,7 @@ class RgbPixel;
 class Block88 {
 public:
 	Block88(RgbPixel **matrix, int x, int y, char component);
+	Block88(std::vector<int> bytes, int x, int y);
 
 	static int const Q[8][8];
 
@@ -35,6 +36,8 @@ public:
 	void toDCCoefs();
 	void fromDCCoefs();
 
+	std::vector<int> toByteArray();
+
 //private:
 	double m_dValues[8][8];
 	int m_values[8][8];
@@ -46,6 +49,8 @@ public:
 	std::tuple<int, int> firstDC;
 	std::vector<std::tuple<int, int, int>>	dcCoef;
 	bool endsIn0 = false;
+
+	std::vector<int> bytesCoefs;
 };
 
 #endif // BLOCK_8_8_H

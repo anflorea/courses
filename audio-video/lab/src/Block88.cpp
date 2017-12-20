@@ -219,6 +219,8 @@ int getSize(int amp) {
 }
 
 void Block88::toDCCoefs() {
+	dcCoef.clear();
+
 	firstDC = std::make_tuple(getSize(coefArray[0]), coefArray[0]);
 	int	zeros = 0;
 
@@ -253,4 +255,62 @@ void Block88::fromDCCoefs() {
 			coefArray[i++] = 0;
 	}
 
+}
+
+std::vector<int> Block88::toByteArray() {
+	bytesCoefs.clear();
+
+	bytesCoefs.push_back(std::get<0>(firstDC));
+	bytesCoefs.push_back(std::get<1>(firstDC));
+
+	for (int i = 0; i < dcCoef.size(); i++) {
+		auto &el = dcCoef.at(i);
+		int zeros = std::get<0>(el);
+		int size = std::get<1>(el);
+		int amp = std::get<2>(el);
+
+		bytesCoefs.push_back(zeros);
+		bytesCoefs.push_back(size);
+		bytesCoefs.push_back(amp);
+	}
+
+	if (endsIn0) {
+		bytesCoefs.push_back(0);
+		bytesCoefs.push_back(0);
+	}
+
+	return bytesCoefs;
+}
+
+Block88::Block88(std::vector<int> bytes, int x, int y) {
+	int a;
+	int b;
+	int c;
+
+	for (int i = 0; i < 64; i++)
+		coefArray[i] = 0;
+
+	m_positionX = x;
+	m_positionY = y;
+
+	endsIn0 = false;
+	dcCoef.clear();
+
+	a = bytes.at(0);
+	b = bytes.at(1);
+
+	int t = 2;
+
+	firstDC = std::make_tuple(a, b);
+
+	while (t < bytes.size()) {
+		a = bytes.at(t++);
+		b = bytes.at(t++);
+		if (a != 0 || b != 0) {
+			c = bytes.at(t++);
+			dcCoef.push_back(std::make_tuple(a, b, c));
+		}
+		else
+			endsIn0 = true;
+	}
 }
