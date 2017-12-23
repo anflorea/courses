@@ -4,6 +4,7 @@
 #include "Block88.h"
 
 char output[30] = "output.ppm";
+char encodedOutput[30] = "encoded";
 
 std::vector<Block88> luma;
 std::vector<Block88> chRed;
@@ -11,8 +12,8 @@ std::vector<Block88> chBlue;
 
 std::vector<int> encoded;
 
-int N;
-int M;
+int N = 600;
+int M = 800;
 
 // #define DEBUG
 
@@ -84,8 +85,9 @@ void encodeImage(char *fileName) {
 		for (auto &e: theChBlues)
 			encoded.push_back(e);
 	}
+}
 
-#ifdef DEBUG
+void testPrintYUV() {
 	luma.at(500).printBlock();
 	luma.at(500).toCoefArray();
 	for (int i = 0; i < 64; i++)
@@ -135,7 +137,6 @@ void encodeImage(char *fileName) {
 
 	luma.at(500).fromCoefArray();
 	luma.at(500).printBlock();
-#endif // DEBUG
 }
 
 std::vector<int> getOneByteArray() {
@@ -258,14 +259,27 @@ void decodeImage(char *fileName) {
 	fw->writePpm();
 }
 
-void testPrintYUV() {
-	printf("\n\nShould print the values in luma, chRed, chBlue\n\n");
-	
-/*
-	for (auto &block: chRed) {
-		block.printBlock();
+void writeByteCode(char *filename) {
+	FILE *fp;
+
+	fp = fopen(filename, "w");
+
+	for (int i = 0; i < encoded.size(); i++) {
+		fprintf(fp, "%d ", encoded.at(i));
 	}
-*/
+	fclose(fp);
+}
+
+void readByteCode(char *filename) {
+	FILE *fp;
+	int val;
+
+	encoded.clear();
+	fp = fopen(filename, "r");
+
+	while (fscanf(fp, "%d ", &val) >= 0) {
+		encoded.push_back(val);
+	}
 }
 
 int main(int argc, char **argv) {
@@ -275,13 +289,19 @@ int main(int argc, char **argv) {
 		printUsage();
 	if (!checkFile(argv[2]))
 		printUsage();
-	if (strcmp(argv[1], "encode") == 0)
+	if (strcmp(argv[1], "encode") == 0) {
 		encodeImage(argv[2]);
-	else if (strcmp(argv[1], "decode") == 0)
-		decodeImage(argv[2]);
+		writeByteCode(encodedOutput);
+	}
+	else if (strcmp(argv[1], "decode") == 0) {
+		readByteCode(argv[2]);
+		decodeImage(output);
+	}
 	else {
 		encodeImage(argv[2]);
+#ifdef DEBUG
 		testPrintYUV();
+#endif // DEBUG
 		decodeImage(output);
 	}
 	return 0;
