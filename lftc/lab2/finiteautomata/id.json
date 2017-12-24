@@ -1,5 +1,5 @@
 {
-  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.+-<>(){}!%/*=;,%",
+  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.+-<>(){}!%$/*=;,%",
   "states": [
 
     {"label": "q0", "start": true, "end": false, "transitions":

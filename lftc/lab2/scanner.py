@@ -8,7 +8,7 @@ tokens = ['ID', 'CONST', 'if', 'else', 'cout', 'cin', 'while', 'return', 'int', 
 alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 numeric = '1234567890.'
 alphanumeric = alphabet + numeric
-symbols_alphabet = '.+*-,><:=()%/; _{}!'
+symbols_alphabet = '.+*-,><:=()%/; _{}!$'
 
 FILENAME = 'cmmdc.txt'
 
