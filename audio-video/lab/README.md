@@ -29,7 +29,7 @@ The algorithm reads all the data from the ppm file and encodes it into a byte ar
 
 *Forward DCT (Discrete Cosine Transform)* takes as input an 8x8 Y/Cb/Cr values block and transforms this block intro another 8x8 DCT coefficient block. The forward DCT is implemented using the following formula:
 
-![alt text](/img/forward_dct_formula.png)
+![picture](img/forward_dct_formula.png)
 
 *Quantization* phase takes as input an 8x8 block of DCT coefficient and divides this block to an 8x8 quantization matrix obtaining an 8x8 quantized coefficients block, using the following quantization matrix:
 
