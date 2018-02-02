@@ -7,7 +7,9 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 /**
  * Created by flo on 01/02/2018.
@@ -36,5 +38,11 @@ public class NetworkService {
     public interface NetworkServiceInterface {
         @GET("/all")
         Call<List<Patient>> getAll();
+
+        @GET("/patients")
+        Call<List<Patient>> getAllPatients();
+
+        @DELETE("/patient/{id}")
+        Call<Patient> deletePatient(@Path("id") int id);
     }
 }

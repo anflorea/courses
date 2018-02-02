@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -22,7 +23,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity implements CustomAdapter.CustomAdapterOnClickListener {
     public static final String TAG = ListActivity.class.getSimpleName();
 
     private NetworkService.NetworkServiceInterface networkService = NetworkService.getInstance();
@@ -44,7 +45,7 @@ public class ListActivity extends AppCompatActivity {
 
         mLayoutError.setVisibility(View.INVISIBLE);
 
-        mAdapter = new CustomAdapter(this);
+        mAdapter = new CustomAdapter(this, this);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -52,6 +53,20 @@ public class ListActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
 
         mRecyclerView.setAdapter(mAdapter);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                int id = (int) viewHolder.itemView.getTag();
+
+                deletePatient(id);
+            }
+        }).attachToRecyclerView(mRecyclerView);
     }
 
     @Override
@@ -63,6 +78,24 @@ public class ListActivity extends AppCompatActivity {
 
     public void tryAgain(View view) {
         makeQuery();
+    }
+
+    private void deletePatient(final int id) {
+        Call<Patient> call = networkService.deletePatient(id);
+        call.enqueue(new Callback<Patient>() {
+            @Override
+            public void onResponse(Call<Patient> call, Response<Patient> response) {
+                makeQuery();
+                Log.d(TAG, "Removal of patient with id: " + String.valueOf(id) + " successful!");
+            }
+
+            @Override
+            public void onFailure(Call<Patient> call, Throwable t) {
+                Log.d(TAG, "Error!");
+                t.printStackTrace();
+                Toast.makeText(ListActivity.this, "Error! " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void makeQuery() {
@@ -96,5 +129,10 @@ public class ListActivity extends AppCompatActivity {
                 Toast.makeText(ListActivity.this, "Error! " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public void onClick(Patient patient) {
+        Log.d(TAG, "Patient clicked: " + patient.getName());
     }
 }

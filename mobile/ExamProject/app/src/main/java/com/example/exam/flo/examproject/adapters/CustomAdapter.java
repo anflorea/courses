@@ -21,9 +21,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
 
     private Context mContext;
     private List<Patient> mData;
+    private CustomAdapterOnClickListener mClickListener;
 
-    public CustomAdapter(Context context) {
+    public CustomAdapter(Context context, CustomAdapterOnClickListener clickListener) {
         mContext = context;
+        mClickListener = clickListener;
+    }
+
+    public interface CustomAdapterOnClickListener {
+        void onClick(Patient patient);
     }
 
     @Override
@@ -53,7 +59,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
         return mData.size();
     }
 
-    public class CustomAdapterViewHolder extends RecyclerView.ViewHolder {
+    public class CustomAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView mNameView;
         private TextView mIdView;
@@ -63,6 +69,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
 
             mNameView = (TextView) itemView.findViewById(R.id.name_tv);
             mIdView = (TextView) itemView.findViewById(R.id.id_tv);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            mClickListener.onClick(mData.get(getAdapterPosition()));
         }
     }
 
