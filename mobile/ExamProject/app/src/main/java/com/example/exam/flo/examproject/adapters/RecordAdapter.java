@@ -70,6 +70,8 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
 
             mType = (TextView) itemView.findViewById(R.id.type_tv);
             mStatus = (TextView) itemView.findViewById(R.id.status_tv);
+
+            itemView.setOnClickListener(this);
         }
 
         @Override
