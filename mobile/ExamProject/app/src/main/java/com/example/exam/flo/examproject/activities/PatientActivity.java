@@ -1,5 +1,6 @@
 package com.example.exam.flo.examproject.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -119,6 +120,8 @@ public class PatientActivity extends AppCompatActivity implements CustomAdapter.
         if (id >= 0) {
             Log.d(TAG, "Logged in with id: " + String.valueOf(id));
 
+            Intent intent = new Intent(this, RecordsActivity.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "You are not logged in. Please select a patient.", Toast.LENGTH_LONG).show();
         }

@@ -22,7 +22,8 @@
         <activity android:name=".activities.AdminActivity" />
         <activity android:name=".activities.PatientActivity" />
         <activity android:name=".activities.AddRecordActivity" />
-        <activity android:name=".activities.RecordsActivity"></activity>
+        <activity android:name=".activities.RecordsActivity" />
+        <activity android:name=".activities.RecordDetailActivity"></activity>
     </application>
 
 </manifest>
