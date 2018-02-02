@@ -44,5 +44,8 @@ public class NetworkService {
 
         @DELETE("/patient/{id}")
         Call<Patient> deletePatient(@Path("id") int id);
+
+        @DELETE("/nuke")
+        Call<Patient> nukeAll();
     }
 }

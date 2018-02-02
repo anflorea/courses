@@ -23,9 +23,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
     private List<Patient> mData;
     private CustomAdapterOnClickListener mClickListener;
 
-    public CustomAdapter(Context context, CustomAdapterOnClickListener clickListener) {
+    private boolean mShowId;
+
+    public CustomAdapter(Context context, CustomAdapterOnClickListener clickListener, boolean showId) {
         mContext = context;
         mClickListener = clickListener;
+        mShowId = showId;
     }
 
     public interface CustomAdapterOnClickListener {
@@ -47,7 +50,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
         Patient patient = mData.get(position);
 
         holder.mNameView.setText(patient.getName());
-        holder.mIdView.setText(String.valueOf(patient.getId()));
+        if (mShowId) {
+            holder.mIdView.setText(String.valueOf(patient.getId()));
+        }
 
         holder.itemView.setTag(patient.getId());
     }

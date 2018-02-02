@@ -1,5 +1,6 @@
 package com.example.exam.flo.examproject.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,7 +46,7 @@ public class ListActivity extends AppCompatActivity implements CustomAdapter.Cus
 
         mLayoutError.setVisibility(View.INVISIBLE);
 
-        mAdapter = new CustomAdapter(this, this);
+        mAdapter = new CustomAdapter(this, this, true);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -117,6 +118,7 @@ public class ListActivity extends AppCompatActivity implements CustomAdapter.Cus
                     Log.d(TAG, data.toString());
                 } else {
                     Log.d(TAG, "onResponse: No items found");
+                    Toast.makeText(ListActivity.this, "No patients found!", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -134,5 +136,10 @@ public class ListActivity extends AppCompatActivity implements CustomAdapter.Cus
     @Override
     public void onClick(Patient patient) {
         Log.d(TAG, "Patient clicked: " + patient.getName());
+        Intent intent = new Intent(this, AddRecordActivity.class);
+
+        intent.putExtra("id", patient.getId());
+
+        startActivity(intent);
     }
 }
