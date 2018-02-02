@@ -1,5 +1,7 @@
 package com.example.exam.flo.examproject.activities;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -103,5 +105,36 @@ public class PatientActivity extends AppCompatActivity implements CustomAdapter.
     public void onClick(Patient patient) {
         Log.d(TAG, "Patient selected: " + patient.getName() + " -- id: " + String.valueOf(patient.getId()));
         mSelectedId = patient.getId();
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        sharedPreferences.edit().putInt("id", patient.getId()).apply();
+    }
+
+    public void onSeeRecords(View view) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        int id = sharedPreferences.getInt("id", -1);
+
+        if (id >= 0) {
+            Log.d(TAG, "Logged in with id: " + String.valueOf(id));
+
+        } else {
+            Toast.makeText(this, "You are not logged in. Please select a patient.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void onLogOut(View view) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        int id = sharedPreferences.getInt("id", -1);
+
+        if (id >= 0) {
+            Log.d(TAG, "Logged out id: " + String.valueOf(id));
+
+            sharedPreferences.edit().remove("id").apply();
+        } else {
+            Toast.makeText(this, "You are not logged in. Please select a patient.", Toast.LENGTH_LONG).show();
+        }
     }
 }

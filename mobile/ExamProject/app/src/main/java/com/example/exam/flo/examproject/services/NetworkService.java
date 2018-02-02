@@ -1,14 +1,17 @@
 package com.example.exam.flo.examproject.services;
 
 import com.example.exam.flo.examproject.domain.Patient;
+import com.example.exam.flo.examproject.domain.Record;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 /**
@@ -47,5 +50,14 @@ public class NetworkService {
 
         @DELETE("/nuke")
         Call<Patient> nukeAll();
+
+        @POST("/add")
+        Call<Record> addRecord(@Body Record record);
+
+        @GET("/records/{id}")
+        Call<List<Record>> getRecordsForId(@Path("id") int id);
+
+        @GET("/details/{id}")
+        Call<Record> getRecord(@Path("id") int id);
     }
 }

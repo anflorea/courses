@@ -21,7 +21,8 @@
         <activity android:name=".activities.ListActivity" />
         <activity android:name=".activities.AdminActivity" />
         <activity android:name=".activities.PatientActivity" />
-        <activity android:name=".activities.AddRecordActivity"></activity>
+        <activity android:name=".activities.AddRecordActivity" />
+        <activity android:name=".activities.RecordsActivity"></activity>
     </application>
 
 </manifest>
