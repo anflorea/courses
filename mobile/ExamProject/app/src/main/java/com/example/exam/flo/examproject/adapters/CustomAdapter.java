@@ -5,8 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.exam.flo.examproject.R;
+import com.example.exam.flo.examproject.domain.Patient;
+
+import java.util.List;
 
 /**
  * Created by flo on 01/02/2018.
@@ -15,7 +19,8 @@ import com.example.exam.flo.examproject.R;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdapterViewHolder> {
     public static final String TAG = CustomAdapter.class.getSimpleName();
 
-    Context mContext;
+    private Context mContext;
+    private List<Patient> mData;
 
     public CustomAdapter(Context context) {
         mContext = context;
@@ -33,22 +38,36 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomAdap
 
     @Override
     public void onBindViewHolder(CustomAdapterViewHolder holder, int position) {
-        // Populate ViewHolder properties for item at position
+        Patient patient = mData.get(position);
+
+        holder.mNameView.setText(patient.getName());
+        holder.mIdView.setText(String.valueOf(patient.getId()));
+
+        holder.itemView.setTag(patient.getId());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        if (mData == null)
+            return 0;
+        return mData.size();
     }
 
     public class CustomAdapterViewHolder extends RecyclerView.ViewHolder {
 
-        // Insert here single item properties
+        private TextView mNameView;
+        private TextView mIdView;
 
         public CustomAdapterViewHolder(View itemView) {
             super(itemView);
 
-            // Init single item properties
+            mNameView = (TextView) itemView.findViewById(R.id.name_tv);
+            mIdView = (TextView) itemView.findViewById(R.id.id_tv);
         }
+    }
+
+    public void setData(List<Patient> data) {
+        mData = data;
+        notifyDataSetChanged();
     }
 }

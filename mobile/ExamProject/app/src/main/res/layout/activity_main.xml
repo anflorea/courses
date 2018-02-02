@@ -6,13 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.example.exam.flo.examproject.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient"
+            android:onClick="onPatientClicked"/>
+
+        <Button
+            android:id="@+id/button_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Employee"
+            android:onClick="onEmployeeClicked"/>
+
+        <Button
+            android:id="@+id/button_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Admin"
+            android:onClick="onAdminClicked"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
