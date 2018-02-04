@@ -1,0 +1,1 @@
+int main opar epar obrace int id semicolon cin id semicolon id assign const semicolon cout id mult const semicolon return opar id plus const epar mult const semicolon ebrace 
