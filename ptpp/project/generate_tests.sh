@@ -12,6 +12,8 @@ random_number () {
 	echo $num
 }
 
+mkdir -p tests
+
 echo "Generating $TESTS_NUMBER tests..."
 
 for i in `seq 1 $TESTS_NUMBER`;

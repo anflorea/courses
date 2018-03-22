@@ -18,7 +18,7 @@ The output of the program will be the result of the multiplication of the two hu
 
 ## Iterative Implemetation
 
-The iterative implementation can be found [here](iterative.c).  
+The iterative implementation can be found [here](iterative.cpp).  
 The program accepts two parameters. The first one is the input file and the second one is the output file (the file in which the result will be stored).  
 The huge numbers are kept in memory as C-like int arrays. The length of one huge number can be fount on position `0` of the array. On the next positions of the array, the digits of the number can be found, in reverse order.  
 
