@@ -49,7 +49,7 @@ Test cases can be generated through a shell script that is available [here](gene
 
 Tests can be run throungh a shell script that is available [here](run_tests.sh). By running the script, the sources for both the iterative and parallel implementation will be compiled. After that, the script will run both implementations for each test case present in the `tests/` folder and will print on the screen the time taken for each test case along with an appropriate error message if the test case result was not successful.
 
-### Conclusions
+# Conclusions
 
 This project has helped me to better understand parallelization along with it's advantages and disadvantages. As it turns out, even though parallelization is usually the best solution for optimizations, some implementations are better off left iterative as the case for this particular implementation of huge numbers multiplication. Using the classical dummy algorithm requires a lot of simple operations and a parallel implementation can not take advantages of the processors computation power because it requires too much time for syncronizations.  
 
