@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
+
+int			T = 5;
+int			*A, *B, **C;
+pthread_mutex_t lock;
 
 int		*construct_huge(char *str) {
 	int		*huge, i, j;
@@ -13,29 +18,55 @@ int		*construct_huge(char *str) {
 	return huge;
 }
 
-int		*multiply_huge(int *A, int *B) {
-	int	*C, i, j, T = 0;
+void	*do_multiplication(void *arg) {
+	int id = *(int*)arg;
+	int	i, j, k;
 
-	C = (int*)malloc(sizeof(int) * (A[0] + B[0] + 1));
-	C[0] = A[0] + B[0] - 1;
-	for (i = 1; i <= A[0] + B[0]; i++) {
-		C[i] = 0;
-	}
 	for (i = 1; i <= A[0]; i++) {
-		for (j = 1; j <= B[0]; j++) {
-			C[i + j - 1] += A[i] * B[j];
+		for (j = id + 1; j <= B[0]; j += T) {
+			k = i + j - 1;
+			C[id][k] += A[i] * B[j];
 		}
 	}
+	pthread_exit(NULL);
+}
+
+void	multiply_huge() {
+	int			i, j;
+	pthread_t 	thread[T];
+	int			tid[T];
+
+	C = (int**)malloc(sizeof(int*) * T);
+	for (i = 0; i < T; i++) {
+		C[i] = (int*)malloc(sizeof(int) * (A[0] + B[0] + 1));
+		C[i][0] = A[0] + B[0] - 1;
+		for (j = 1; j <= A[0] + B[0] + 1; j++) {
+			C[i][j] = 0;
+		}
+	}
+
+	for (i = 0; i < T; i++) {
+		tid[i] = i;
+		printf("creating thread %i\n", i);
+		pthread_create(&thread[i], NULL, do_multiplication, &tid[i]);
+	}
+
+	for (i = 0; i < T; i++) {
+		printf("trying to join thread %d\n", i);
+		pthread_join(thread[i], NULL);
+	}
+
+	int T = 0;
 	for (i = 1; i <= C[0]; i++) {
 		C[i] += T;
 		T = C[i] / 10;
 		C[i] %= 10;
 	}
+
 	if (T) {
 		C[0] += 1;
 		C[C[0]] = T;
 	}
-	return C;
 }
 
 void	write_huge(FILE *out, int *huge) {
@@ -49,7 +80,11 @@ void	write_huge(FILE *out, int *huge) {
 int		main(int argc, char **argv) {
 	FILE	*inFile, *outFile;
 	char	*str1, *str2;
-	int		*A, *B, *C;
+
+	if (pthread_mutex_init(&lock, NULL) != 0) {
+        printf("\n mutex init failed\n");
+        return 1;
+    }
 
 	if (argc != 3) {
 		printf("usage: %s <input file> <output file>\n", argv[0]);
@@ -70,7 +105,7 @@ int		main(int argc, char **argv) {
 	fscanf(inFile, "%s%s", str1, str2);
 	A = construct_huge(str1);
 	B = construct_huge(str2);
-	C = multiply_huge(A, B);
+	multiply_huge();
 	write_huge(outFile, C);	
 	fclose(outFile);
 	return (0);
