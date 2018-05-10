@@ -24,11 +24,11 @@ The huge numbers are kept in memory as C-like int arrays. The length of one huge
 
 * Example:
 
-  For the input number `123`, the in-memory array will look like this:
+  For the input number `567`, the in-memory array will look like this:
 
 |0|1|2|3|
 |-|-|-|-|
-|3|3|2|1|
+|3|7|6|5|
 
 
 The algorithm used to multiply the huge numbers is the classical way. Each digit `i` from the first number is multiplied by each digit `j` from the second number and added to the result on position `i + j - 1`. After this, one more iteration is done to ensure that only single digit numbers are stored on each position.  
