@@ -3,7 +3,7 @@ function x = gauss(A, b)
     E = [A b];
     
     for p = 1 : n - 1
-        [~, q] = max(abs(A(p:n, p)));
+        [~, q] = max(abs(E(p:n, p)));
         q = q + p - 1;
         E([p q], :) = E([q p], :);
         for i = p + 1 : n
