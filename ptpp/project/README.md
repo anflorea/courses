@@ -39,7 +39,7 @@ For computing the result, the program uses the same method as the iterative impl
 
 The number of threads is stored in the variable T, but it can be easily changed by setting the `NO_THREADS` enviroment variable to a suitable integer.
 
-### Tesing
+# Tesing
 
 ## Tests generation
 
