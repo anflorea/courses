@@ -16,13 +16,22 @@ The input of the program will be taken from a text file. The file will contain t
 
 The output of the program will be the result of the multiplication of the two huge numbers. The result will be written in a text file. The output number's digits will also be in the usual human-readable order.
 
-## Iterative Implemetation
+## Sequential Implemetation
 
-The iterative implementation can be found [here](iterative.cpp).  
+The sequantial implementation can be found [here](iterative.cpp).  
 The program accepts two parameters. The first one is the input file and the second one is the output file (the file in which the result will be stored).  
 The huge numbers are kept in memory as C-like int arrays. The length of one huge number can be fount on position `0` of the array. On the next positions of the array, the digits of the number can be found, in reverse order.  
 
-The algorithm used to multiply the huge numbers is the classical one. Each digit `i` from the first number is multiplied by each digit `j` from the second number and added to the result on position `i + j - 1`. After this, one more iteration is done to ensure that only single digit numbers are stored on each position.  
+* Example:
+
+  For the input number `123`, the in-memory array will look like this:
+
+|0|1|2|3|
+|-|-|-|-|
+|3|3|2|1|
+
+
+The algorithm used to multiply the huge numbers is the classical way. Each digit `i` from the first number is multiplied by each digit `j` from the second number and added to the result on position `i + j - 1`. After this, one more iteration is done to ensure that only single digit numbers are stored on each position.  
 
 The overall complexity of the iterative implementation is:
 ```
@@ -35,11 +44,11 @@ The parallel implementation can be found [here](parallel.cpp).
 The program accepts two parameters. The first one is the input file and the second one is the output file (the file in which the result will be stored).  
 The huge numbers are kept in memory as C-like int arrays. The length of one huge number can be fount on position `0` of the array. On the next positions of the array, the digits of the number can be found, in reverse order.  
 
-For computing the result, the program uses the same method as the iterative implementation, exept that it equaly balances the computations that need to be done among all the threads and each thread, after computing it's calculations, adds the result to the final array by syncronizing with a mutex.
+For computing the result, the program uses the same method as the sequential implementation, exept that it equaly balances the computations that need to be done among all the threads and each thread, after computing it's calculations, adds the result to the final array by syncronizing with a mutex.
 
 The number of threads is stored in the variable T, but it can be easily changed by setting the `NO_THREADS` enviroment variable to a suitable integer.
 
-# Tesing
+# Testing
 
 ## Tests generation
 
