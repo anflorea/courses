@@ -1,0 +1,217 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8" />
+    <title>Awesome Pong Game</title>
+    <script src="phaser2.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        #gameCanvas {
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    var game = new Phaser.Game(800, 400, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
+
+    var ball;
+    var leftPaddle;
+    var rightPaddle;
+    var leftScore;
+    var rightScore;
+
+    var leftPlayerScore = 0;
+    var rightPlayerScore = 0;
+
+    var s;
+
+    var downPressed = false;
+    var upPressed = false;
+    var wPressed = false;
+    var sPressed = false;
+
+    function preload ()
+    {
+        game.load.image('field', 'assets/grass.png');
+        game.load.image('paddle', 'assets/paddle.png');
+        game.load.image('ball', 'assets/ball.png');
+    }
+
+    function create () {
+        game.physics.startSystem(Phaser.Physics.ARCADE);
+        game.canvas.id = 'gameCanvas';
+
+        // Check bounds collision except for left and right side
+        game.physics.arcade.checkCollision.left = false;
+        game.physics.arcade.checkCollision.right = false;
+
+        s = game.add.tileSprite(0, 0, 800, 600, 'field');
+
+        leftPaddle = game.add.sprite(50, game.world.centerY, 'paddle');
+        leftPaddle.anchor.setTo(0.5, 0.5);
+
+        game.physics.enable(leftPaddle, Phaser.Physics.ARCADE);
+
+        leftPaddle.body.collideWorldBounds = true;
+        leftPaddle.body.bounce.set(0.3);
+        leftPaddle.body.immovable = true;
+        leftPaddle.body.drag.y = 2000;
+
+        rightPaddle = game.add.sprite(game.width - 50, game.world.centerY, 'paddle');
+        rightPaddle.anchor.setTo(0.5, 0.6);
+
+        game.physics.enable(rightPaddle, Phaser.Physics.ARCADE);
+
+        rightPaddle.body.collideWorldBounds = true;
+        rightPaddle.body.bounce.set(0.6);
+        rightPaddle.body.immovable = true;
+        rightPaddle.body.drag.y = 2000;
+
+        ball = game.add.sprite(game.world.centerX, game.world.centerY, 'ball');
+        ball.anchor.set(0.5);
+        ball.checkWorldBounds = true;
+
+        game.physics.enable(ball, Phaser.Physics.ARCADE);
+
+        ball.body.collideWorldBounds = true;
+        ball.body.bounce.set(1);
+
+        ball.events.onOutOfBounds.add(ballLost, this);
+
+        game.time.events.add(Phaser.Timer.SECOND * 2, releaseBall, this);
+
+        leftScore = game.add.text(70, 50, "0", { font: "65px Arial", fill: "#ffffff", align: "center" });
+        leftScore.anchor.set(0.5);
+        rightScore = game.add.text(game.world.width - 70, 50, "0", { font: "65px Arial", fill: "#ffffff", align: "center" });
+        rightScore.anchor.set(0.5);
+    }
+
+    function releaseBall() {
+        ball.body.velocity.y = Math.floor(Math.random() * 300) - 150;
+        ball.body.velocity.x = 300 * (1 - Math.round(Math.random()) * 2);
+
+        console.log("Y velocity: " + ball.body.velocity.y);
+        console.log("X velocity: " + ball.body.velocity.x);
+    }
+
+    function resetBall() {
+        console.log("reset ball");
+        ball.x = game.world.centerX;
+        ball.y = game.world.centerY;
+        releaseBall();
+    }
+
+    function ballLost(item) {
+        var who;
+        if (ball.x < game.world.centerX) {
+            rightPlayerScore++;
+            rightScore.text = rightPlayerScore;
+            who = "Left";
+        } else if (ball.x > game.world.centerY) {
+            leftPlayerScore++;
+            leftScore.text = leftPlayerScore;
+            who = "Right";
+        }
+        console.log(who + " lost the ball :(");
+
+        console.log("Left score: " + leftPlayerScore);
+        console.log("Right score: " + rightPlayerScore);
+        resetBall();
+    }
+
+    function update ()
+    {
+        if (wPressed) {
+            leftPaddle.body.velocity.y -= 70;
+        }
+
+        if (sPressed) {
+            leftPaddle.body.velocity.y += 70;
+        }
+
+        if (leftPaddle.body.velocity.y > 800)
+            leftPaddle.body.velocity.y = 800;
+        if (leftPaddle.body.velocity.y < -800)
+            leftPaddle.body.velocity.y = -800
+
+        if (upPressed) {
+            rightPaddle.body.velocity.y -= 70;
+        }
+
+        if (downPressed) {
+            rightPaddle.body.velocity.y += 70;
+        }
+
+        if (rightPaddle.body.velocity.y > 800)
+            rightPaddle.body.velocity.y = 800;
+        if (rightPaddle.body.velocity.y < -800)
+            rightPaddle.body.velocity.y = -800
+
+        game.physics.arcade.collide(ball, leftPaddle, ballHitLeftPaddle, null, this);
+        game.physics.arcade.collide(ball, rightPaddle, ballHitRightPaddle, null, this);
+    }
+
+    function calculateYVelocity(_ball, _paddle) {
+        var diff = 0;
+        if (_ball.y > _paddle.y) {
+            // Ball is on the bottom side of the paddle
+            diff = _ball.y - _paddle.y;
+            _ball.body.velocity.y = diff * 10;
+        } else if (_ball.y < _paddle.y) {
+            // Ball is on the top side of the paddle
+            diff = _paddle.y - _ball.y;
+            _ball.body.velocity.y = -diff * 10;
+        }
+    }
+
+    function ballHitLeftPaddle(_ball, _paddle) {
+        _ball.body.velocity.x = 300;
+        calculateYVelocity(_ball, _paddle);
+    }
+
+    function ballHitRightPaddle(_ball, _paddle) {
+        _ball.body.velocity.x = -300;
+        calculateYVelocity(_ball, _paddle);
+    }
+
+    function keyDownHandler(e) {
+        if (e.keyCode == 40) {
+            downPressed = true;
+        } else if (e.keyCode == 38) {
+            upPressed = true;
+        } else if (e.keyCode == 87) {
+            wPressed = true;
+        } else if (e.keyCode == 83) {
+            sPressed = true;
+        } else if (e.keyCode == 82) {
+            resetBall();
+        }
+    }
+
+    function keyUpHandler(e) {
+        if (e.keyCode == 40) {
+            downPressed = false;
+        }
+        else if (e.keyCode == 38) {
+            upPressed = false;
+        } else if (e.keyCode == 87) {
+            wPressed = false;
+        } else if (e.keyCode == 83) {
+            sPressed = false;
+        }
+    }
+
+</script>
+
+</body>
+</html>
