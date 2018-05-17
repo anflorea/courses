@@ -162,7 +162,7 @@ This project has helped me to better understand parallelization along with it's 
 
 Of course that there are some implementations of huge numbers multiplication that will perform better when parallelized (some examples of such implementation are [Karatsuba's Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm) or [Fast Fourier transorm](https://en.wikipedia.org/wiki/Fast_Fourier_transform) ), but my purpose of this project was to compare the iterative and parallel implemtations of the classical dummy algorithm.
 
-## Data
+## Tests results
 
 After running both implementations on the same set of data, this was the result:
 
