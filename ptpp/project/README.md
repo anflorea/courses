@@ -33,7 +33,7 @@ The huge numbers are kept in memory as C-like int arrays. The length of one huge
 
 The algorithm used to multiply the huge numbers is the classical way. Each digit `i` from the first number is multiplied by each digit `j` from the second number and added to the result on position `i + j - 1`. After this, one more iteration is done to ensure that only single digit numbers are stored on each position.  
 
-The overall complexity of the iterative implementation is:
+The overall complexity of the sequential implementation is:
 ```
 O(n * m)
 ```
@@ -44,7 +44,17 @@ The parallel implementation can be found [here](parallel.cpp).
 The program accepts two parameters. The first one is the input file and the second one is the output file (the file in which the result will be stored).  
 The huge numbers are kept in memory as C-like int arrays. The length of one huge number can be fount on position `0` of the array. On the next positions of the array, the digits of the number can be found, in reverse order.  
 
-For computing the result, the program uses the same method as the sequential implementation, exept that it equaly balances the computations that need to be done among all the threads and each thread, after computing it's calculations, adds the result to the final array by syncronizing with a mutex.
+For computing the result, the program uses the same method as the sequential implementation, exept that it equaly balances the computations that need to be done among all the threads and each thread, after computing it's calculations, adds the result to the final array by syncronizing with a mutex. 
+
+Each thread is uniquely identified by an `id` and it get's to compute the multiplications for `n / T` digits from the first number with all the digits from the second number, where `n` is the total number of digits and T is the number of threads. Each threads work looks like this:
+
+```
+	for (i = id; i <= A[0]; i += T) {
+		for (j = 1; j <= B[0]; j++) {
+			C[i + j - 1] += A[i] * B[j];
+		}
+	}
+```
 
 The number of threads is stored in the variable T, but it can be easily changed by setting the `NO_THREADS` enviroment variable to a suitable integer.
 
@@ -54,12 +64,100 @@ The number of threads is stored in the variable T, but it can be easily changed 
 
 Test cases can be generated through a shell script that is available [here](generate_tests.sh). Once runned, the script will generate a bunch of test cases in a folder named tests. The script can be personalized as for how many test cases it generates and how much bigger do they get, by modifing the variables `TESTS_NUMBER` and `GROWTH_FACTOR`. The tests generator will generate for each test two huge numbers of the same digits numbers and for each test, it will also generate a file containing the correct solution.
 
+The shell script looks like this:
+```
+#!/bin/bash
+
+TESTS_NUMBER=20
+GROWTH_FACTOR=100
+
+TEST_FILENAME='tests/test'
+TEST_EXTENSION='in'
+ANSWER_EXTENSION='ok'
+
+random_number () {
+	num=`cat /dev/urandom | env LC_CTYPE=C tr -dc '0-9' | fold -w $1 | head -n 1`
+	echo $num
+}
+
+mkdir -p tests
+
+echo "Generating $TESTS_NUMBER tests..."
+
+for i in `seq 1 $TESTS_NUMBER`;
+do
+	printf -v no "%02d" $i
+	FILENAME=$TEST_FILENAME$no.$TEST_EXTENSION
+	ANSWER_FILENAME=$TEST_FILENAME$no.$ANSWER_EXTENSION
+	DIGITS_NBR=`echo $(($i * $GROWTH_FACTOR))`
+	echo "Generating test: $FILENAME. The numbers have $DIGITS_NBR digits."
+	nbr1=$(random_number $DIGITS_NBR)
+	nbr2=$(random_number $DIGITS_NBR)
+	echo $nbr1 > $FILENAME
+	echo $nbr2 >> $FILENAME
+	c="$(BC_LINE_LENGTH=0 bc <<< "$nbr1 * $nbr2" )"
+	echo $c | tr -d "[:space:]" | tr -d "\\" > $ANSWER_FILENAME
+done
+```
+
 ## Tests running
 
 Tests can be run throungh a shell script that is available [here](run_tests.sh). By running the script, the sources for both the iterative and parallel implementation will be compiled. After that, the script will run both implementations for each test case present in the `tests/` folder and will print on the screen the time taken for each test case along with an appropriate error message if the test case result was not successful.
 
+The shell script looks like this:
+
+```
+#!/bin/bash
+
+TEST_FILENAME='tests/test'
+TEST_FOLDER='tests/'
+TEST_EXTENSION='in'
+ANSWER_EXTENSION='ok'
+OUTPUT_EXTENSION='out'
+
+rm iterative
+rm parallel
+
+echo "Compiling iterative implementation"
+g++ -o iterative iterative.cpp
+echo "Compiling parallel implementation"
+g++ -lpthread -o parallel parallel.cpp
+
+tests=`ls $TEST_FOLDER | grep .$TEST_EXTENSION`
+
+echo "Testing iterative implementation...\n"
+
+for file in $tests;
+do
+	name=`echo "$file" | cut -f 1 -d '.'`
+	TIME_S=`TIMEFORMAT=%R bash -c "time ./iterative $TEST_FOLDER$file $name.$OUTPUT_EXTENSION"`
+	DIFF=`diff $TEST_FOLDER$name.$ANSWER_EXTENSION $name.$OUTPUT_EXTENSION`
+	echo "Test: $file"
+	echo $TIME_S
+	if [ $DIFF ]
+	then
+		echo "ERROR!"
+	fi
+done
+
+echo "Testing parallel implementation...\n"
+
+for file in $tests;
+do
+	name=`echo "$file" | cut -f 1 -d '.'`
+	TIME_S=`TIMEFORMAT=%R bash -c "time ./parallel $TEST_FOLDER$file $name.$OUTPUT_EXTENSION"`
+	DIFF=`diff $TEST_FOLDER$name.$ANSWER_EXTENSION $name.$OUTPUT_EXTENSION`
+	echo "Test: $file"
+	echo $TIME_S
+	if [ $DIFF ]
+	then
+		echo "ERROR!"
+	fi
+done
+```
+
 # Conclusions
 
-This project has helped me to better understand parallelization along with it's advantages and disadvantages. As it turns out, even though parallelization is usually the best solution for optimizations, some implementations are better off left iterative as the case for this particular implementation of huge numbers multiplication. Using the classical dummy algorithm requires a lot of simple operations and a parallel implementation can not take advantages of the processors computation power because it requires too much time for syncronizations.  
+This project has helped me to better understand parallelization along with it's advantages and disadvantages. As it turns out, even though parallelization is usually the best solution for optimizations, some implementations are better off left sequential as the case for this particular implementation of huge numbers multiplication. Using the classical dummy algorithm requires a lot of simple operations and a parallel implementation can not take advantages of the processors computation power because it requires too much time for syncronizations.  
 
 Of course that there are some implementations of huge numbers multiplication that will perform better when parallelized (some examples of such implementation are [Karatsuba's Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm) or [Fast Fourier transorm](https://en.wikipedia.org/wiki/Fast_Fourier_transform) ), but my purpose of this project was to compare the iterative and parallel implemtations of the classical dummy algorithm.
