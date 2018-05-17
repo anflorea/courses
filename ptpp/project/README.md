@@ -161,3 +161,32 @@ done
 This project has helped me to better understand parallelization along with it's advantages and disadvantages. As it turns out, even though parallelization is usually the best solution for optimizations, some implementations are better off left sequential as the case for this particular implementation of huge numbers multiplication. Using the classical dummy algorithm requires a lot of simple operations and a parallel implementation can not take advantages of the processors computation power because it requires too much time for syncronizations.  
 
 Of course that there are some implementations of huge numbers multiplication that will perform better when parallelized (some examples of such implementation are [Karatsuba's Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm) or [Fast Fourier transorm](https://en.wikipedia.org/wiki/Fast_Fourier_transform) ), but my purpose of this project was to compare the iterative and parallel implemtations of the classical dummy algorithm.
+
+## Data
+
+After running both implementations on the same set of data, this was the result:
+
+| Test NO	| No of digits	| Sequential	| Parallel with 2 threads	| Parallel with 8 threads	|
+|-			|-				|-				|-							|-							|
+|1			|100			|0.003			|0.029						|0.042						|
+|2			|200			|0.004			|0.128						|0.152						|
+|3			|300			|0.004			|0.292						|0.333						|
+|4			|400			|0.004			|0.510						|0.598						|
+|5			|500			|0.004			|0.801						|0.936						|
+|6			|600			|0.005			|1.127						|1.358						|
+|7			|700			|0.005			|1.499						|1.764						|
+|8			|800			|0.005			|1.993						|2.363						|
+|9			|900			|0.006			|2.581						|2.898						|
+|10			|1000			|0.006			|3.189						|3.617						|
+|11			|1100			|0.007			|3.831						|4.399						|
+|12			|1200			|0.008			|4.573						|5.331						|
+|13			|1300			|0.008			|5.461						|6.172						|
+|14			|1400			|0.009			|6.239						|7.120						|
+|15			|1500			|0.010			|7.138						|8.131						|
+|16			|1600			|0.010			|8.173						|9.440						|
+|17			|1700			|0.011			|9.237						|10.680						|
+|18			|1800			|0.013			|10.124						|11.682						|
+|19			|1900			|0.014			|11.279						|13.311						|
+|20			|2000			|0.015			|12.799						|14.446						|
+
+The tests were run on a 2015 15' Macbook Pro with an Inter Core i7 2.8 processor.
